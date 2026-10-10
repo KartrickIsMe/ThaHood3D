@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bbfmya0b1i86d"]
+
+[ext_resource type="PackedScene" uid="uid://bqjxb3t5dichx" path="res://characters/player/skins/rookie/rookie.tscn" id="1_508ok"]
+[ext_resource type="Script" uid="uid://bity2x4kvlg73" path="res://characters/player/player.gd" id="1_xxgcw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3jg8h"]
+height = 1.8
+
+[node name="Player" type="CharacterBody3D" unique_id=1964608030]
+script = ExtResource("1_xxgcw")
+
+[node name="Humanoid" parent="." unique_id=1303671314 instance=ExtResource("1_508ok")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.8, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1239281789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16391814, 0)
+shape = SubResource("CapsuleShape3D_3jg8h")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1527486729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85129046, -0.08729088)

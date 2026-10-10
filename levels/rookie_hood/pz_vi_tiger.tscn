@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://bn4m28egqpajv"]
+
+[ext_resource type="PackedScene" uid="uid://ckdiciiineeyj" path="res://models/tank/Pz-VI Tiger.fbx" id="1_n0s1f"]
+[ext_resource type="Texture2D" uid="uid://bncf3stc5htpv" path="res://models/tank/colorAtlas.png" id="2_erw1s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h3rrv"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lb27l"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ysrsp"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5mcw"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nuxju"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_golyg"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hegas"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tj3d0"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_plaiy"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbje1"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p8m4m"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uxk4y"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1dgw8"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k5hgl"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bj7hm"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mld1w"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64b86"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbull"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jreki"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kifyj"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fuqo0"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6g7b2"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ufyj5"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pfpsq"]
+albedo_texture = ExtResource("2_erw1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0imva"]
+albedo_texture = ExtResource("2_erw1s")
+
+[node name="Pz-VI Tiger" unique_id=746753076 instance=ExtResource("1_n0s1f")]
+
+[node name="Pz-VI-Tiger" parent="." index="0" unique_id=901447949]
+transform = Transform3D(0.9876433, 0.15671957, 1.7106935e-08, -0.15671957, 0.9876433, 7.353426e-08, -5.371288e-09, -7.530659e-08, 1, 0.0045834435, -0.06426084, 4.851559e-09)
+material_override = SubResource("StandardMaterial3D_h3rrv")
+
+[node name="TracksLeft" parent="Pz-VI-Tiger" index="0" unique_id=1343959979]
+transform = Transform3D(0.072508514, -0.9973645, -0.0026396334, 0.99667776, 0.07255654, -0.037007134, 0.037101127, 5.247018e-05, 0.9993115, 2.5726802, 0.6368258, -0.26326233)
+material_override = SubResource("StandardMaterial3D_lb27l")
+
+[node name="WheelLeft" parent="Pz-VI-Tiger/TracksLeft" index="0" unique_id=159230586]
+material_override = SubResource("StandardMaterial3D_ysrsp")
+
+[node name="WheelLeft_001" parent="Pz-VI-Tiger/TracksLeft" index="1" unique_id=528055522]
+material_override = SubResource("StandardMaterial3D_i5mcw")
+
+[node name="WheelLeft_002" parent="Pz-VI-Tiger/TracksLeft" index="2" unique_id=1081935555]
+material_override = SubResource("StandardMaterial3D_nuxju")
+
+[node name="WheelLeft_003" parent="Pz-VI-Tiger/TracksLeft" index="3" unique_id=737563826]
+material_override = SubResource("StandardMaterial3D_golyg")
+
+[node name="WheelLeft_004" parent="Pz-VI-Tiger/TracksLeft" index="4" unique_id=1012116022]
+material_override = SubResource("StandardMaterial3D_hegas")
+
+[node name="WheelLeft_005" parent="Pz-VI-Tiger/TracksLeft" index="5" unique_id=1653550841]
+material_override = SubResource("StandardMaterial3D_tj3d0")
+
+[node name="WheelLeft_006" parent="Pz-VI-Tiger/TracksLeft" index="6" unique_id=1486663946]
+material_override = SubResource("StandardMaterial3D_plaiy")
+
+[node name="WheelLeft_007" parent="Pz-VI-Tiger/TracksLeft" index="7" unique_id=603973969]
+transform = Transform3D(1, -2.0259222e-08, 0, -2.0270363e-08, 1, 1.6007107e-10, 0, 4.9112714e-10, 1, -0.038930655, -0.10237193, -1.2741486)
+material_override = SubResource("StandardMaterial3D_qbje1")
+
+[node name="WheelLeft_008" parent="Pz-VI-Tiger/TracksLeft" index="8" unique_id=1901976974]
+material_override = SubResource("StandardMaterial3D_p8m4m")
+
+[node name="WheelLeft_009" parent="Pz-VI-Tiger/TracksLeft" index="9" unique_id=1960094838]
+material_override = SubResource("StandardMaterial3D_uxk4y")
+
+[node name="TracksRight" parent="Pz-VI-Tiger" index="1" unique_id=2056157441]
+material_override = SubResource("StandardMaterial3D_1dgw8")
+
+[node name="WheelRight" parent="Pz-VI-Tiger/TracksRight" index="0" unique_id=222600354]
+material_override = SubResource("StandardMaterial3D_k5hgl")
+
+[node name="WheelRight_001" parent="Pz-VI-Tiger/TracksRight" index="1" unique_id=2042676004]
+material_override = SubResource("StandardMaterial3D_bj7hm")
+
+[node name="WheelRight_002" parent="Pz-VI-Tiger/TracksRight" index="2" unique_id=579850563]
+material_override = SubResource("StandardMaterial3D_mld1w")
+
+[node name="WheelRight_003" parent="Pz-VI-Tiger/TracksRight" index="3" unique_id=1429605697]
+material_override = SubResource("StandardMaterial3D_64b86")
+
+[node name="WheelRight_004" parent="Pz-VI-Tiger/TracksRight" index="4" unique_id=1485390436]
+material_override = SubResource("StandardMaterial3D_tbull")
+
+[node name="WheelRight_005" parent="Pz-VI-Tiger/TracksRight" index="5" unique_id=1263715672]
+material_override = SubResource("StandardMaterial3D_jreki")
+
+[node name="WheelRight_006" parent="Pz-VI-Tiger/TracksRight" index="6" unique_id=408608826]
+material_override = SubResource("StandardMaterial3D_kifyj")
+
+[node name="WheelRight_007" parent="Pz-VI-Tiger/TracksRight" index="7" unique_id=1971690759]
+material_override = SubResource("StandardMaterial3D_fuqo0")
+
+[node name="WheelRight_008" parent="Pz-VI-Tiger/TracksRight" index="8" unique_id=1705953754]
+material_override = SubResource("StandardMaterial3D_6g7b2")
+
+[node name="WheelRight_009" parent="Pz-VI-Tiger/TracksRight" index="9" unique_id=1375999447]
+material_override = SubResource("StandardMaterial3D_ufyj5")
+
+[node name="Turret" parent="Pz-VI-Tiger" index="2" unique_id=1283811297]
+transform = Transform3D(0.3056924, 0, 0.9521303, 0, 1, 0, -0.9521303, 0, 0.3056924, 0.043161392, 1.558119, -0.14732432)
+material_override = SubResource("StandardMaterial3D_pfpsq")
+
+[node name="Barrel" parent="Pz-VI-Tiger/Turret" index="0" unique_id=2028148478]
+transform = Transform3D(0.99009985, 0.13180009, -0.04828413, -0.13693705, 0.8313986, -0.53854007, -0.030836105, 0.53982013, 0.8412156, 0.12650496, 0.36565626, 1.7354292)
+material_override = SubResource("StandardMaterial3D_0imva")

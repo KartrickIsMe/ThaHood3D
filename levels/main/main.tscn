@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ba01ixnwmh018"]
+
+[ext_resource type="Script" uid="uid://bwebjy88hx7l5" path="res://levels/main/main.gd" id="1_0o3xy"]
+[ext_resource type="PackedScene" uid="uid://w8vo2tc78kh2" path="res://levels/rookie_hood/rookie_hood.tscn" id="2_vc640"]
+[ext_resource type="PackedScene" uid="uid://bbfmya0b1i86d" path="res://characters/player/player.tscn" id="3_f6gjy"]
+
+[node name="Main" type="Node" unique_id=1956557121]
+script = ExtResource("1_0o3xy")
+level = ExtResource("2_vc640")
+player = ExtResource("3_f6gjy")
