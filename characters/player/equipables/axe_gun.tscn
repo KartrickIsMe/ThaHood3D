@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ctpdnxgci2gpb"]
+
+[ext_resource type="PackedScene" uid="uid://d2bg3r0qflu3n" path="res://models/guns/AxeGun.fbx" id="1_4sx50"]
+[ext_resource type="Texture2D" uid="uid://61l2jbdi64mx" path="res://models/guns/GunAxe_Texture.png" id="2_qcgnh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wj05"]
+albedo_texture = ExtResource("2_qcgnh")
+
+[node name="AxeGun" unique_id=2034982128 instance=ExtResource("1_4sx50")]
+
+[node name="AxeGun" parent="." index="0" unique_id=709143263]
+material_override = SubResource("StandardMaterial3D_4wj05")
+
+[node name="Trigger" type="Marker3D" parent="AxeGun" index="0" unique_id=908918172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39698282, -0.10073091, -0.016429318)
+gizmo_extents = 0.7
+
+[node name="Handle" type="Marker3D" parent="AxeGun" index="1" unique_id=1534174281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21645823, -0.033743456, -0.016429318)
+gizmo_extents = 0.7
+
+[node name="ForeGrip" type="Marker3D" parent="AxeGun" index="2" unique_id=1401782257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9271862, 0.04970458, -0.016429318)
+gizmo_extents = 0.7

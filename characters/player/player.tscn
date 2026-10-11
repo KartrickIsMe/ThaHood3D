@@ -1,20 +1,54 @@
 [gd_scene format=3 uid="uid://bbfmya0b1i86d"]
 
-[ext_resource type="PackedScene" uid="uid://bqjxb3t5dichx" path="res://characters/player/skins/rookie/rookie.tscn" id="1_508ok"]
-[ext_resource type="Script" uid="uid://bity2x4kvlg73" path="res://characters/player/player.gd" id="1_xxgcw"]
+[ext_resource type="Script" uid="uid://b6hho7ftpnqch" path="res://characters/player/player.gd" id="1_xxgcw"]
+[ext_resource type="PackedScene" uid="uid://bh18uvfxrqeib" path="res://characters/player/skins/rookie/humanoid_rigged.tscn" id="2_exd8k"]
+[ext_resource type="PackedScene" uid="uid://ctpdnxgci2gpb" path="res://characters/player/equipables/axe_gun.tscn" id="3_exd8k"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3jg8h"]
-height = 1.8
+radius = 0.3
+height = 1.7935302
 
 [node name="Player" type="CharacterBody3D" unique_id=1964608030]
 script = ExtResource("1_xxgcw")
 
-[node name="Humanoid" parent="." unique_id=1303671314 instance=ExtResource("1_508ok")]
+[node name="humanoid_rigged" parent="." unique_id=216258922 instance=ExtResource("2_exd8k")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.8, 0)
 
+[node name="Skeleton3D" parent="humanoid_rigged" index="0" unique_id=129928798]
+bones/0/rotation = Quaternion(-0.03127156, -0.04654265, -0.029750647, 0.99798346)
+bones/1/rotation = Quaternion(0.004358471, 0.012200635, 0.023013541, 0.99965125)
+bones/2/rotation = Quaternion(0.010091142, 0.0021503286, 0.013702516, 0.9998529)
+bones/3/rotation = Quaternion(0.009868048, 0.0023442074, 0.013740345, 0.99985427)
+bones/4/rotation = Quaternion(0.07377802, -0.0009799453, 0.0039061888, 0.99726665)
+bones/5/rotation = Quaternion(-0.065958366, 0.011932641, -0.0014932775, 0.9977499)
+bones/18/rotation = Quaternion(0.37136802, -0.057738166, 0.018936843, 0.9264954)
+bones/34/rotation = Quaternion(0.34235713, -0.05616295, 0.018173326, 0.9377138)
+bones/39/rotation = Quaternion(0.36143848, 0.05695293, -0.018605161, 0.9304689)
+
+[node name="FABRIK3D" type="FABRIK3D" parent="humanoid_rigged/Skeleton3D" index="1" unique_id=2073398075]
+setting_count = 1
+settings/0/target_node = NodePath("")
+settings/0/root_bone_name = ""
+settings/0/root_bone = -1
+settings/0/end_bone_name = ""
+settings/0/end_bone = -1
+settings/0/joint_count = 0
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1239281789]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16391814, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.100185156, 0)
 shape = SubResource("CapsuleShape3D_3jg8h")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1527486729]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85129046, -0.08729088)
+[node name="AxeGun" parent="." unique_id=2034982128 instance=ExtResource("3_exd8k")]
+transform = Transform3D(-0.47495604, -0.13910002, -0.009638712, 0.075497255, -0.22778481, -0.43294242, 0.11722585, -0.41688165, 0.23977667, 0.83816856, 0.21355194, -0.13455911)
+
+[node name="AxeGun" parent="AxeGun" index="0" unique_id=709143263]
+transform = Transform3D(0.09591795, 7.599593e-08, 0.59228355, -0.5509633, -0.22017747, 0.08922632, 0.2173458, -0.55814147, -0.03519821, 1.5481571, 0.89330244, -0.7325954)
+
+[node name="Trigger" parent="AxeGun/AxeGun" index="0" unique_id=908918172]
+transform = Transform3D(0.9999999, 0, 4.4703484e-08, 1.4901161e-08, 1, -1.6763806e-08, 1.4901161e-08, 3.4458935e-08, 1, -0.11556533, -0.286168, 0.039689798)
+
+[node name="ForeGrip" parent="AxeGun/AxeGun" index="2" unique_id=1401782257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9271862, 0.03633696, -0.1730107)
+
+[editable path="humanoid_rigged"]
+[editable path="AxeGun"]

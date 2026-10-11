@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://p6kvv41ika4"
-path="res://.godot/imported/rookie.glb-7406b11360a932d9cdffa3c1cb17dfdf.scn"
+uid="uid://bkh7myiayy7lq"
+path="res://.godot/imported/humanoid_rigged.fbx-6dd96134d54ede03391270aced34c32f.scn"
 
 [deps]
 
-source_file="res://characters/player/skins/rookie/rookie.glb"
-dest_files=["res://.godot/imported/rookie.glb-7406b11360a932d9cdffa3c1cb17dfdf.scn"]
+source_file="res://characters/player/skins/humanoid_rigged.fbx"
+dest_files=["res://.godot/imported/humanoid_rigged.fbx-6dd96134d54ede03391270aced34c32f.scn"]
 
 [params]
 
@@ -32,7 +32,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -40,6 +40,7 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=2
-gltf/embedded_image_handling=1
-gltf/texture_map_mode=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

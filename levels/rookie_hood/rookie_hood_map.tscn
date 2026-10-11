@@ -81,7 +81,7 @@ buffer = PackedFloat32Array(-10.980238, 0.7652161, 4.782555, 26.21251, 4.762191,
 [node name="rookie_hood_terrain" unique_id=1942001447 instance=ExtResource("1_67wmo")]
 
 [node name="Reference" type="CSGBox3D" parent="." index="0" unique_id=1731872046]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.340832, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1766005, 0)
 size = Vector3(0.7, 1.8, 0.7)
 
 [node name="Grid" parent="." index="1" unique_id=1236388438]
@@ -178,7 +178,7 @@ transform = Transform3D(3.45, 0, 0, 0, 3.4001405, 0.58441824, 0, -0.58441824, 3.
 transform = Transform3D(3.45, 0, 0, 0, 3.45, 0, 0, 0, 3.45, -25.706612, 1.0477815, 23.568727)
 
 [node name="Tree Type7 01" parent="Trees" index="14" unique_id=1428041445 instance=ExtResource("28_y21le")]
-transform = Transform3D(3.45, 0, 0, 0, 3.45, 0, 0, 0, 3.45, 12.982452, 0.6445163, -5.1034446)
+transform = Transform3D(3.45, 0, 0, 0, 3.45, 0, 0, 0, 3.45, 12.982452, 0.5306551, -5.1034446)
 
 [node name="Tree Type7 02" parent="Trees" index="15" unique_id=592635567 instance=ExtResource("29_rq4v1")]
 transform = Transform3D(3.45, 0, 0, 0, 3.45, 0, 0, 0, 3.45, -21.452753, 1.4697961, -25.009457)

@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://bqjxb3t5dichx"]
-
-[ext_resource type="PackedScene" uid="uid://p6kvv41ika4" path="res://characters/player/skins/rookie/rookie.glb" id="1_7sexy"]
-
-[node name="Humanoid" unique_id=1303671314 instance=ExtResource("1_7sexy")]
