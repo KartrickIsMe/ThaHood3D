@@ -22,3 +22,9 @@ gizmo_extents = 0.7
 [node name="ForeGrip" type="Marker3D" parent="AxeGun" index="2" unique_id=1401782257]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9271862, 0.04970458, -0.016429318)
 gizmo_extents = 0.7
+
+[node name="Index" type="Marker3D" parent="AxeGun/ForeGrip" index="0" unique_id=1822043596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.059361637, 0, -0.085754365)
+
+[node name="Thumb" type="Marker3D" parent="AxeGun/ForeGrip" index="1" unique_id=410436731]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.059361637, 0, 0.12512256)

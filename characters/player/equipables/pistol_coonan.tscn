@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://d30u2jdvju7iq"]
+
+[ext_resource type="PackedScene" uid="uid://covpnu7kdssq4" path="res://models/guns/pistol-coonan.fbx" id="1_ldvi4"]
+
+[node name="pistol-coonan" unique_id=256974670 instance=ExtResource("1_ldvi4")]

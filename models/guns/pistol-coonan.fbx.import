@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cfnsr83sxvic7"
-path="res://.godot/imported/Walk Forward.fbx-45c1d1cf90d545d8d0945b77f132e087.scn"
+uid="uid://covpnu7kdssq4"
+path="res://.godot/imported/pistol-coonan.fbx-2ee9b35935be4911845666f557cb61f7.scn"
 
 [deps]
 
-source_file="res://characters/player/skins/rookie/Walk Forward.fbx"
-dest_files=["res://.godot/imported/Walk Forward.fbx-45c1d1cf90d545d8d0945b77f132e087.scn"]
+source_file="res://models/guns/pistol-coonan.fbx"
+dest_files=["res://.godot/imported/pistol-coonan.fbx-2ee9b35935be4911845666f557cb61f7.scn"]
 
 [params]
 

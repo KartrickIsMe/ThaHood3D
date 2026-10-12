@@ -23,6 +23,12 @@ window/stretch/aspect="expand"
 
 project/assembly_name="ThaHood3D"
 
+[editor]
+
+movie_writer/ogv/encoding_speed=1
+movie_writer/movie_file="/home/kartikey/Videos/Godot_Movies/movie.ogv"
+movie_writer/disable_vsync=true
+
 [editor_plugins]
 
 enabled=PackedStringArray()

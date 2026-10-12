@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bkh7myiayy7lq"
-path="res://.godot/imported/humanoid_rigged.fbx-6dd96134d54ede03391270aced34c32f.scn"
+uid="uid://npnne14ufpad"
+path="res://.godot/imported/sniper.glb-348c862c929956f56e9a95bdeac44bcb.scn"
 
 [deps]
 
-source_file="res://characters/player/skins/humanoid_rigged.fbx"
-dest_files=["res://.godot/imported/humanoid_rigged.fbx-6dd96134d54ede03391270aced34c32f.scn"]
+source_file="res://models/guns/sniper.glb"
+dest_files=["res://.godot/imported/sniper.glb-348c862c929956f56e9a95bdeac44bcb.scn"]
 
 [params]
 
@@ -32,7 +32,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -40,7 +40,6 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

@@ -13,6 +13,11 @@ sky_material = SubResource("ProceduralSkyMaterial_lr5jn")
 [sub_resource type="Environment" id="Environment_ul665"]
 background_mode = 2
 sky = SubResource("Sky_4lg62")
+glow_enabled = true
+glow_bloom = 0.1
+fog_enabled = true
+fog_light_color = Color(0.69803923, 1, 1, 1)
+fog_light_energy = 0.4
 
 [node name="rookie_hood" type="Node3D" unique_id=914703213]
 script = ExtResource("1_l8tfr")
@@ -25,3 +30,4 @@ environment = SubResource("Environment_ul665")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=754453683]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 11.603657, 0)
+shadow_enabled = true

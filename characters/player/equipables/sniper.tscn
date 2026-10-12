@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://xmbpmhm3kvi0"]
+
+[ext_resource type="PackedScene" uid="uid://npnne14ufpad" path="res://models/guns/sniper.glb" id="1_8tref"]
+
+[node name="sniper" unique_id=1597189584 instance=ExtResource("1_8tref")]
+
+[node name="Trigger" type="Marker3D" parent="." index="2" unique_id=985062113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2264449, -0.050104395, 0)
+
+[node name="Grip" type="Marker3D" parent="." index="3" unique_id=346531359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13385911, 0.058031857, 0)

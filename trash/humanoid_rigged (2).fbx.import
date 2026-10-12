@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bw5n43284vldc"
-path="res://.godot/imported/humanoid_rigged.fbx-ae293990f4e26e1a2169030108afdfeb.scn"
+path="res://.godot/imported/humanoid_rigged (2).fbx-5bd5d46da503bf7008abaad833e3c1fa.scn"
 
 [deps]
 
-source_file="res://characters/player/skins/rookie/humanoid_rigged.fbx"
-dest_files=["res://.godot/imported/humanoid_rigged.fbx-ae293990f4e26e1a2169030108afdfeb.scn"]
+source_file="res://trash/humanoid_rigged (2).fbx"
+dest_files=["res://.godot/imported/humanoid_rigged (2).fbx-5bd5d46da503bf7008abaad833e3c1fa.scn"]
 
 [params]
 

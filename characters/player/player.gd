@@ -1,24 +1,38 @@
 extends CharacterBody3D
 
 @export var mouse_sensitivity: float = 0.4
-@onready var camera: Camera3D = %Camera3D
-
-@export var walk_speed: float = 5.0
-@export var sprint_speed: float = 8.0
+@onready var camera := %PlayerNeckRotator
+@export var walk_speed: float = 1
+@export var sprint_speed: float = 5.0
+@export var acceleration: float = 0.2
 @export var jump_force: float = 5.0
-
+@export var camera_constraints_degrees: float = 110
+@onready var animation_tree: AnimationTree = %AnimationTree
+var camera_max_angle_degrees: float = camera_constraints_degrees
+var camera_min_angle_degrees: float = -camera_constraints_degrees
+var smooth_value_y: float
 var speed: float
+@onready var r_hand_ik: FABRIK3D = %RHandIK
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	animation_tree.active = true
+
+func _process(_delta: float) -> void:
+	update_animation()
+	if speed == sprint_speed:
+		r_hand_ik.influence = move_toward(
+			r_hand_ik.influence, 0, 0.05)
+	else:
+		r_hand_ik.influence = move_toward(
+			r_hand_ik.influence, 1, 0.05)
+
+func update_animation() -> void:
+	smooth_value_y = move_toward(smooth_value_y, velocity.y/jump_force, 0.1)
+	animation_tree["parameters/BlendSpace2D/blend_position"] = Vector2( Vector2(velocity.x, velocity.z).length()/sprint_speed, smooth_value_y)
+	
 
 func _physics_process(delta: float) -> void:
-	
-	if velocity.length() != 0:
-		$humanoid_rigged/Idle_Walk.play("default")
-	else:
-		$humanoid_rigged/Idle_Walk.stop()
-	
 	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -29,25 +43,25 @@ func _physics_process(delta: float) -> void:
 	var input_direction_2d = Input.get_vector(
 		"move_left", "move_right", "move_forward", "move_backward"
 	)
-	
+
 	var input_direction_3d = Vector3(
 		input_direction_2d.x, 0.0, input_direction_2d.y
 	)
 	
 	var direction = transform.basis * input_direction_3d
 	
-	velocity.x = direction.x * speed
-	velocity.z = direction.z * speed
+	if is_on_floor():
+		velocity.x = move_toward(velocity.x, direction.x * speed, acceleration)
+		velocity.z = move_toward(velocity.z, direction.z * speed, acceleration)
 	
 	move_and_slide()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		self.rotation_degrees.y -= event.relative.x * mouse_sensitivity
-		camera.rotation_degrees.x -= event.relative.y * mouse_sensitivity
-		camera.rotation_degrees.x = clamp(
-			camera.rotation_degrees.x, -60, 69
-		)
+		camera.rotation_degrees.x += event.relative.y * mouse_sensitivity
+		camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, camera_min_angle_degrees, camera_max_angle_degrees)
+
 	elif Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
@@ -55,11 +69,3 @@ func _unhandled_input(event: InputEvent) -> void:
 		speed = sprint_speed
 	else:
 		speed = walk_speed
-	
-	if Input.is_action_just_pressed("attack") && not %AnimationPlayer.is_playing():
-		%AnimationPlayer.play("axe_attack")
-	if Input.is_action_just_pressed("alt_attack") && not %AnimationPlayer.is_playing():
-		shoot()
-
-func shoot() -> void:
-	%AnimationPlayer.play("axe_shoot")
