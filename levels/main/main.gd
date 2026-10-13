@@ -9,4 +9,4 @@ func _ready() -> void:
 	player_scene = player.instantiate()
 	add_child(level_scene)
 	add_child(player_scene)
-	player_scene.position.y = 40
+	player_scene.position.y = 4
