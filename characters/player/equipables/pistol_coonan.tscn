@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://d30u2jdvju7iq"]
 
 [ext_resource type="PackedScene" uid="uid://covpnu7kdssq4" path="res://models/guns/pistol-coonan.fbx" id="1_ldvi4"]
+[ext_resource type="Script" uid="uid://b8ab8t1g27y8o" path="res://characters/player/equipables/pistol_coonan.gd" id="2_mmxkl"]
 
 [node name="pistol-coonan" unique_id=256974670 instance=ExtResource("1_ldvi4")]
+script = ExtResource("2_mmxkl")
