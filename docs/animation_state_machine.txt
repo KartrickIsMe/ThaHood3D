@@ -1,0 +1,9 @@
+# Move values (one per state)
+animation_tree["parameters/Unarmed/BlendSpace2D/blend_position"] = ...
+animation_tree["parameters/Rifle/BlendSpace2D/blend_position"] = ...
+
+# Fire the one shot
+animation_tree["parameters/Rifle/OneShot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+
+# Switch states
+animation_tree["parameters/playback"].travel("Rifle")

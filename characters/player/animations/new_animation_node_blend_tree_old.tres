@@ -1,0 +1,34 @@
+[gd_resource type="AnimationNodeBlendTree" format=3 uid="uid://cw6gu6xquy03y"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xxgcw"]
+animation = &"falling"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_w3hsa"]
+animation = &"running"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mwc2e"]
+animation = &"idle_walking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rjo0c"]
+animation = &"idle_standing"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_c6leb"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_xxgcw")
+blend_point_0/pos = Vector2(0, -1)
+blend_point_0/name = &"falling"
+blend_point_1/node = SubResource("AnimationNodeAnimation_w3hsa")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_1/name = &"running"
+blend_point_2/node = SubResource("AnimationNodeAnimation_mwc2e")
+blend_point_2/pos = Vector2(0.2, 0)
+blend_point_2/name = &"idle_walking"
+blend_point_3/node = SubResource("AnimationNodeAnimation_rjo0c")
+blend_point_3/pos = Vector2(0, 0)
+blend_point_3/name = &"idle_standing"
+
+[resource]
+graph_offset = Vector2(-746.41455, 260.86462)
+nodes/output/position = Vector2(60, 540)
+nodes/BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_c6leb")
+nodes/BlendSpace2D/position = Vector2(-940, 580)
+node_connections = [&"output", 0, &"BlendSpace2D"]

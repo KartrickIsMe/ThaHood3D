@@ -10,3 +10,4 @@ func _ready() -> void:
 	add_child(level_scene)
 	add_child(player_scene)
 	player_scene.position.y = 4
+	player_scene.position.x = 10

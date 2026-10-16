@@ -8,6 +8,7 @@ extends CharacterBody3D
 @export var jump_force: float = 5.0
 @export var camera_constraints_degrees: float = 110
 @onready var animation_tree: AnimationTree = %AnimationTree
+@onready var actual_camera: Camera3D = %Camera3D
 var camera_max_angle_degrees: float = camera_constraints_degrees
 var camera_min_angle_degrees: float = -camera_constraints_degrees
 var smooth_value_y: float
@@ -19,18 +20,16 @@ func _ready() -> void:
 	animation_tree.active = true
 
 func _process(_delta: float) -> void:
-	update_animation()
+	actual_camera.global_rotation.z = 0
 	if speed == sprint_speed:
 		r_hand_ik.influence = move_toward(
 			r_hand_ik.influence, 0, 0.05)
+		animation_tree["parameters/RifleArmed/Blend2/blend_amount"] = move_toward(animation_tree["parameters/RifleArmed/Blend2/blend_amount"], 0, 0.2)
 	else:
 		r_hand_ik.influence = move_toward(
 			r_hand_ik.influence, 1, 0.05)
+		animation_tree["parameters/RifleArmed/Blend2/blend_amount"] = move_toward(animation_tree["parameters/RifleArmed/Blend2/blend_amount"], 1, 0.2)
 
-func update_animation() -> void:
-	smooth_value_y = move_toward(smooth_value_y, velocity.y/jump_force, 0.1)
-	animation_tree["parameters/BlendSpace2D/blend_position"] = Vector2( Vector2(velocity.x, velocity.z).length()/sprint_speed, smooth_value_y)
-	
 
 func _physics_process(delta: float) -> void:
 	

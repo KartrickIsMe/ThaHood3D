@@ -1,0 +1,10 @@
+[gd_scene format=3]
+
+[node name="Skeleton3D" type="Skeleton3D" unique_id=1612146299]
+bones/0/name = "barrel"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)

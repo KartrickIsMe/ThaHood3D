@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ck5453kd4qfx2"]
+
+[ext_resource type="PackedScene" uid="uid://bitglei8stbqv" path="res://models/guns/smg-mp5.fbx" id="1_ajyrd"]
+
+[node name="smg-mp5" unique_id=1788956577 instance=ExtResource("1_ajyrd")]
