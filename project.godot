@@ -14,6 +14,10 @@ config/name="ThaHood3D"
 run/main_scene="uid://d0sfmv7cbvf4r"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[debug]
+
+gdscript/warnings/inferred_declaration=1
+
 [display]
 
 window/stretch/mode="canvas_items"
@@ -40,6 +44,7 @@ folder_colors={
 "res://characters/": "red",
 "res://levels/": "orange",
 "res://models/": "yellow",
+"res://sound_fx/": "pink",
 "res://textures/": "green",
 "res://trash/": "gray"
 }

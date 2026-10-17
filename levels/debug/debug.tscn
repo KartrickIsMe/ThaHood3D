@@ -1,15 +1,15 @@
 [gd_scene format=4 uid="uid://d0sfmv7cbvf4r"]
 
+[ext_resource type="Texture2D" uid="uid://csfid88ermwoc" path="res://kloofendal_48d_partly_cloudy_puresky_4k.hdr" id="1_6wbpm"]
 [ext_resource type="PackedScene" uid="uid://bbfmya0b1i86d" path="res://characters/player/player.tscn" id="1_m43av"]
 [ext_resource type="Texture2D" uid="uid://cderfa8cdc247" path="res://levels/debug/prototype_textures/texture_10.png" id="1_nyhfw"]
 [ext_resource type="Texture2D" uid="uid://by66dkodq7prm" path="res://levels/debug/prototype_textures/texture_01.png" id="3_e5avq"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e5avq"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t76ll"]
+panorama = ExtResource("1_6wbpm")
 
 [sub_resource type="Sky" id="Sky_6wbpm"]
-sky_material = SubResource("ProceduralSkyMaterial_e5avq")
+sky_material = SubResource("PanoramaSkyMaterial_t76ll")
 
 [sub_resource type="Environment" id="Environment_6ls5g"]
 background_mode = 2

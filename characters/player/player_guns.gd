@@ -3,9 +3,11 @@ extends "res://characters/player/player.gd"
 @onready var gun_target: Marker3D = %GunTarget
 @onready var r_hand_ba: BoneAttachment3D  = %RHandBA
 #@onready var r_hand_ik: FABRIK3D = %RHandIK
+@onready var crosshair: TextureRect = %Crosshair
 @export var pistol_scene: PackedScene = preload("res://characters/player/equipables/pistol_coonan.tscn")
 @export var axe_scene: PackedScene = preload("res://characters/player/equipables/axe.tscn")
 @export var ak47_scene: PackedScene = preload("res://characters/player/equipables/ak_47.tscn")
+
 
 var pistol_node: Node3D = pistol_scene.instantiate()
 var axe_node: Node3D = axe_scene.instantiate()
@@ -13,25 +15,32 @@ var ak47_node: Node3D = ak47_scene.instantiate()
 
 var gun_name: String = "any"
 
-
-#called by the parent _ready
-func _ready() -> void:
-	super() # call parent's _ready first
-
 func _process(delta: float) -> void:
 	super(delta)
 	update_animation()
-	if Input.is_action_pressed("attack") && speed != sprint_speed:
-		if gun_name == "ak47":
-			ak47_node.attack_fire(animation_tree, camera)
+	if speed != sprint_speed:
+		set_crosshair_visibility(true)
+		if Input.is_action_pressed("attack"):
+			if gun_name == "ak47":
+				ak47_node.attack_fire(true, animation_tree, camera, camera_min_angle_degrees,  camera_max_angle_degrees, delta)
+	else:
+		set_crosshair_visibility(false)
+	
+@warning_ignore("shadowed_variable_base_class")
+func set_crosshair_visibility(is_visible: bool) -> void:
+	crosshair.visible = is_visible
+	
 
+#region set_no_weapon()
 func set_no_weapon() -> void:
 	animation_tree["parameters/playback"].travel("Unarmed")
 	gun_name = "any"
 	r_hand_ik.active = false
 	if r_hand_ba.get_child_count() == 1:
 		r_hand_ba.remove_child(r_hand_ba.get_child(0))
+#endregion
 
+#region pistol set
 func set_pistol() -> void:
 	set_no_weapon()
 	r_hand_ik.active = true
@@ -42,7 +51,9 @@ func set_pistol() -> void:
 	pistol_node.rotation_degrees = Vector3(-0.7, -117.7, 88.3)
 	print(pistol_node.position)
 	gun_target.position = Vector3(0.213, -0.302, -0.955)
+#endregion
 
+#region axe set
 func set_axe() -> void:
 	set_no_weapon()
 	gun_name = "axe"
@@ -51,16 +62,20 @@ func set_axe() -> void:
 	axe_node.position = Vector3(0.081, 0.134, -0.021)
 	axe_node.rotation_degrees = Vector3(83.6, -167.3, 75.3)
 	gun_target.position = Vector3(0.213, -0.302, -0.955)
+#endregion
 
+#region set ak47
 func set_ak47() -> void:
 	set_no_weapon()
 	animation_tree["parameters/playback"].travel("RifleArmed")
 	gun_name = "ak47"
 	if r_hand_ba.get_child_count() == 0:
 		r_hand_ba.add_child(ak47_node)
+#endregion
 
 func _unhandled_input(event: InputEvent) -> void:
 	super(event)
+#region cycle weapons
 	if Input.is_action_just_pressed("secondary"):
 		set_pistol()
 	elif Input.is_action_just_pressed("primary"):
@@ -69,6 +84,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		set_axe()
 	elif Input.is_action_just_pressed("four"):
 		set_ak47()
+#endregion
 	
 	if Input.is_action_pressed("attack") && speed != sprint_speed:
 		if gun_name == "axe":
