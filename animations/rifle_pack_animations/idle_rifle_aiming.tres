@@ -1,4 +1,4 @@
-[gd_resource type="Animation" format=3 uid="uid://baipvolf23unq"]
+[gd_resource type="Animation" format=3 uid="uid://dja4slfao8mw5"]
 
 [resource]
 resource_name = "mixamo_com"
@@ -6,7 +6,7 @@ length = 2.1
 loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath("Skeleton3D:mixamorig_Hips")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -122,7 +122,7 @@ tracks/16/enabled = true
 tracks/16/path = NodePath("Skeleton3D:mixamorig_Head")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
-tracks/16/keys = PackedFloat32Array(0, 1, -0.007909, 0.442407, -0.053474, 0.895184)
+tracks/16/keys = PackedFloat32Array(0, 1, -0.00081232056, 0.31937853, -0.05402871, 0.9460854)
 tracks/17/type = "rotation_3d"
 tracks/17/imported = true
 tracks/17/enabled = true

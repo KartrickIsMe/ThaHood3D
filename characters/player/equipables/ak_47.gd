@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var muzzle_flash: GPUParticles3D = %GPUParticles3D
-@export var fire_rate: float = 7
+@export var fire_rate: float = 9	
 @export var recoil: float = 7
 @onready var shot_sound: AudioStreamPlayer3D = %AudioStreamPlayer3D
 var fire_rate_set: bool
