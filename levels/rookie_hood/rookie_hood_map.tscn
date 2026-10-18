@@ -84,7 +84,7 @@ buffer = PackedFloat32Array(-10.980238, 0.7652161, 4.782555, 26.21251, 4.762191,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1766005, 0)
 size = Vector3(0.7, 1.8, 0.7)
 
-[node name="Grid" parent="." index="1" unique_id=1236388438]
+[node name="Grid" parent="." index="1" unique_id=542138]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 

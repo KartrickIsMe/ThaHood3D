@@ -8,7 +8,7 @@ albedo_texture = ExtResource("2_qcgnh")
 
 [node name="AxeGun" unique_id=2034982128 instance=ExtResource("1_4sx50")]
 
-[node name="AxeGun" parent="." index="0" unique_id=709143263]
+[node name="AxeGun" parent="." index="0" unique_id=1979917671]
 material_override = SubResource("StandardMaterial3D_4wj05")
 
 [node name="Trigger" type="Marker3D" parent="AxeGun" index="0" unique_id=908918172]

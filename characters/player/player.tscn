@@ -1,21 +1,17 @@
 [gd_scene format=4 uid="uid://bbfmya0b1i86d"]
 
+[ext_resource type="PackedScene" uid="uid://rpos82sau8kn" path="res://characters/player/equipables/ak_47.tscn" id="2_gqopd"]
 [ext_resource type="Texture2D" uid="uid://cumcnryfgfagh" path="res://characters/player/skins/rookie/rookie_NonOverlapping.png" id="2_idpv6"]
-[ext_resource type="Animation" uid="uid://crj3av7uruee1" path="res://animations/rifle_pack_animations/actual_rifle_aim.tres" id="3_8l73k"]
-[ext_resource type="Animation" uid="uid://cv7oxu5w12lt1" path="res://animations/falling.res" id="4_rpf03"]
-[ext_resource type="Animation" uid="uid://b5wd3gogfh2qp" path="res://animations/axe_attack.res" id="4_x5dtk"]
-[ext_resource type="Animation" uid="uid://csnjlu74v6hnw" path="res://animations/direct_swing.res" id="5_3t07l"]
-[ext_resource type="Animation" uid="uid://c4vmvp5lc0bs2" path="res://animations/axe_swing3.res" id="5_on558"]
-[ext_resource type="Animation" uid="uid://bwp6ave6lvgsh" path="res://animations/gun_walking.res" id="5_x5dtk"]
-[ext_resource type="Animation" uid="uid://mw8dm8t4vat6" path="res://animations/idle_standing.res" id="6_3t07l"]
-[ext_resource type="Animation" uid="uid://bv78all055a4e" path="res://animations/idle_walking.res" id="7_on558"]
-[ext_resource type="Animation" uid="uid://coccqsjxkro1p" path="res://animations/rifle_pack_animations/firing_rifle.tres" id="8_aqrcq"]
-[ext_resource type="Animation" uid="uid://c81tgu75o1vqp" path="res://animations/running.res" id="8_gqopd"]
-[ext_resource type="Animation" uid="uid://dja4slfao8mw5" path="res://animations/rifle_pack_animations/idle_rifle_aiming.tres" id="8_icpky"]
-[ext_resource type="Animation" uid="uid://ddryyqif3ldjk" path="res://animations/pistol_shoot.res" id="9_x5dtk"]
-[ext_resource type="Animation" uid="uid://dh5aa0wmtcrwg" path="res://animations/pistol_overdrive.tres" id="10_on558"]
-[ext_resource type="Animation" uid="uid://dv8e3o608t0rf" path="res://animations/rifle_pack_animations/rifle_walk.tres" id="13_8l73k"]
-[ext_resource type="Animation" uid="uid://c3e47aab245uh" path="res://animations/rifle_pack_animations/sprint_rifle.tres" id="14_58jvb"]
+[ext_resource type="Animation" uid="uid://yttlhqrf4rwi" path="res://animations/basic/fall.tres" id="2_on558"]
+[ext_resource type="Animation" uid="uid://crj3av7uruee1" path="res://animations/rifle/aim.tres" id="3_8l73k"]
+[ext_resource type="Animation" uid="uid://ba80x11l5t6e1" path="res://animations/basic/run.tres" id="3_gqopd"]
+[ext_resource type="Animation" uid="uid://dglp0q28m6isj" path="res://animations/basic/stand.tres" id="4_icpky"]
+[ext_resource type="Animation" uid="uid://66psmepfibmf" path="res://animations/basic/walk.tres" id="5_58jvb"]
+[ext_resource type="Animation" uid="uid://coccqsjxkro1p" path="res://animations/rifle/fire.tres" id="8_aqrcq"]
+[ext_resource type="Animation" uid="uid://dja4slfao8mw5" path="res://animations/rifle/idle_waist.tres" id="8_icpky"]
+[ext_resource type="Animation" uid="uid://ij421ygqrgsg" path="res://animations/rifle/aim_hip.tres" id="9_8l73k"]
+[ext_resource type="Animation" uid="uid://dv8e3o608t0rf" path="res://animations/rifle/walk.tres" id="13_8l73k"]
+[ext_resource type="Animation" uid="uid://c3e47aab245uh" path="res://animations/rifle/run.tres" id="14_58jvb"]
 [ext_resource type="Texture2D" uid="uid://cq8oygxmcucdr" path="res://textures/icons8-crosshair-64.png" id="17_aqrcq"]
 
 [sub_resource type="GDScript" id="GDScript_rpf03"]
@@ -161,82 +157,57 @@ bind/33/pose = Transform3D(61.34244, -78.93927, -2.386704, -35.628777, -24.96419
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_icpky"]
 albedo_texture = ExtResource("2_idpv6")
 
-[sub_resource type="Animation" id="Animation_aqrcq"]
-length = 0.001
-tracks/0/type = "rotation_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Skeleton3D:mixamorig_LeftForeArm")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0.060511, 0.079013, 0.366308, 0.925156)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3jg8h"]
+radius = 0.3
+height = 1.8
 
-[sub_resource type="Animation" id="Animation_on558"]
-resource_name = "new_animation"
-length = 0.36666667
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_cx3v5"]
-_data = {
-&"RESET": SubResource("Animation_aqrcq"),
-&"actual_rifle_aim": ExtResource("3_8l73k"),
-&"axe_attack": ExtResource("4_x5dtk"),
-&"axe_swing3": ExtResource("5_on558"),
-&"direct_swing": ExtResource("5_3t07l"),
-&"falling": ExtResource("4_rpf03"),
-&"firing_rifle": ExtResource("8_aqrcq"),
-&"gun_walking": ExtResource("5_x5dtk"),
-&"idle_rifle_aiming": ExtResource("8_icpky"),
-&"idle_standing": ExtResource("6_3t07l"),
-&"idle_walking": ExtResource("7_on558"),
-&"pistol_overdrive": ExtResource("10_on558"),
-&"pistol_shoot": ExtResource("9_x5dtk"),
-&"rifle_walk": ExtResource("13_8l73k"),
-&"running": ExtResource("8_gqopd"),
-&"simple_shoot": SubResource("Animation_on558"),
-&"sprint_rifle": ExtResource("14_58jvb")
-}
+[sub_resource type="ArrayMesh" id="ArrayMesh_exd8k"]
+_surfaces = [{
+"aabb": AABB(-0.1, -0.1, -0.1, 0.2, 0.2, 0.2),
+"attribute_data": PackedByteArray("VVUVP6uqKj+rqio/q6oqP6uqKj9VVVU/q6oqP6uqKj8AAEA/q6oqPwAAQD9VVVU/AABAP1VVVT+rqio/VVVVP6uqKj+rqio/q6oqP6uqKj9VVRU/q6oqP1VVFT8AAAA/VVUVPwAAAD+rqio/AAAAP6uqKj+rqio/AABAP6uqKj+rqio/q6oqP6uqKj8AAAA/q6oqPwAAAD8AAEA/AAAAPwAAQD+rqio/AAAAP6uqKj9VVRU/q6oqP1VVFT9VVVU/VVUVP1VVVT8AAAA/VVVVPwAAAD+rqio/q6oqP1VVVT8AAEA/VVVVPwAAQD8AAIA/q6oqP1VVVT9VVRU/VVVVP1VVFT+rqio/AAAAP1VVVT9VVRU/VVVVP1VVFT8AAIA/VVUVP1VVVT+rqio/VVVVP6uqKj8AAIA/AAAAPwAAAD9VVRU/AAAAP1VVFT+rqio/VVUVP6uqKj8AAAA/q6oqPwAAAD8AAAA/AABAP6uqKj9VVVU/q6oqP1VVVT9VVVU/VVVVP1VVVT8AAEA/VVVVPwAAQD+rqio/VVVVP6uqKj8AAEA/q6oqPwAAQD8AAAA/AABAPwAAAD9VVVU/AAAAP1VVVT+rqio/q6pqP6uqKj9VVVU/q6oqP1VVVT8AAAA/VVVVPwAAAD+rqmo/AAAAP6uqaj+rqio/AABAP1VVVT9VVVU/VVVVP1VVVT8AAIA/q6pqP1VVVT9VVVU/VVVVP1VVVT+rqio/VVVVP1VVVT+rqmo/VVVVP6uqaj8AAIA/q6pqP1VVVT8AAIA/VVVVPwAAgD8AAIA/VVVVP6uqKj+rqmo/q6oqP6uqaj9VVVU/AACAP1VVVT+rqmo/VVVVP6uqaj+rqio/q6pqP6uqKj8AAIA/q6oqPwAAgD9VVVU/AACAP6uqKj+rqmo/q6oqP6uqaj8AAAA/q6pqPwAAAD8AAIA/AAAAPwAAgD+rqio/q6oqPwAAAD9VVRU/AAAAP1VVFT+rqqo+VVUVP6uqqj6rqio/q6qqPquqKj8AAAA/AABAPwAAAD+rqio/AAAAP6uqKj+rqqo+q6oqP6uqqj4AAEA/q6qqPgAAQD8AAAA/AABAP6uqqj6rqio/q6qqPquqKj+rqio+q6oqP6uqKj4AAEA/q6oqPgAAQD+rqqo+AAAAP6uqqj5VVRU/q6qqPlVVFT8AAAA/VVUVPwAAAD8AAAA/AAAAPwAAAD+rqqo+q6oqP6uqqj5VVRU/q6qqPlVVFT+rqio+VVUVP6uqqj4AAAA/q6qqPgAAAD+rqio+AAAAP6uqKj5VVRU/q6oqPlVVFT+rqqo+VVUVP6uqKj6rqio/q6oqPquqKj+rqqo+AABAP6uqKj6rqio/q6oqPquqKj8AAAAAVVUVP6uqKj4AAAA/q6oqPgAAAD8AAAAAq6oqP6uqKj5VVRU/q6oqPlVVFT8AAAAAVVVVPwAAAD8AAEA/AAAAPwAAQD+rqqo+AABAP6uqqj5VVVU/q6qqPlVVVT8AAAA/q6pqPwAAAD9VVVU/AAAAP1VVVT+rqqo+VVVVP6uqqj6rqmo/q6qqPquqaj8AAAA/VVVVP6uqqj4AAEA/q6qqPgAAQD+rqio+AABAP6uqKj5VVVU/q6oqPlVVVT+rqqo+q6pqP6uqqj5VVVU/q6qqPlVVVT+rqio+AACAPwAAAD+rqmo/AAAAP6uqaj+rqqo+q6pqP6uqqj4AAIA/q6qqPgAAgD8AAAA/VVVVP6uqKj6rqmo/q6oqPquqaj+rqqo+VVVVP6uqKj4AAEA/q6oqPgAAQD8AAAAAq6pqP6uqKj5VVVU/q6oqPlVVVT8AAAAAAACAP6uqKj6rqmo/q6oqPquqaj8AAAAAAACAP6uqqj6rqmo/q6qqPquqaj+rqio+q6pqP6uqKj4AAIA/q6oqPgAAgD+rqqo+AAAAP1VVVT9VVdU+VVVVP1VV1T6rqio/VVXVPquqKj8AAAA/q6oqPwAAAD9VVVU/q6qqPquqKj9VVdU+q6oqP1VV1T5VVVU/VVXVPlVVVT8AAAA/VVVVPwAAAD8AAIA/q6qqPlVVVT9VVdU+VVVVP1VV1T4AAIA/AACAPlVVVT+rqqo+VVVVP6uqqj4AAIA/VVXVPlVVVT+rqqo+VVVVP6uqqj6rqio/VVXVPgAAAD8AAAA/AAAAPwAAAD+rqio/AAAAP6uqKj9VVdU+q6oqP1VV1T4AAAA/q6qqPlVVVT8AAIA+VVVVPwAAgD6rqio/AACAPquqKj+rqqo+q6oqP6uqqj5VVVU/VVXVPquqKj+rqqo+q6oqP6uqqj4AAAA/q6qqPgAAAD9VVdU+AAAAP1VV1T6rqio/q6qqPquqKj8AAIA+q6oqPwAAgD4AAAA/AACAPgAAAD+rqqo+AAAAP6uqqj6rqio/q6qqPVVVVT+rqio+VVVVP6uqKj4AAIA/AAAAAFVVVT+rqqo9VVVVP6uqqj0AAIA/q6oqPlVVVT8AAIA+VVVVPwAAgD4AAIA/q6oqPlVVVT+rqqo9VVVVP6uqqj2rqio/q6qqPVVVVT8AAAAAVVVVPwAAAACrqio/AAAAAKuqKj+rqqo9q6oqP6uqqj1VVVU/q6qqPauqKj8AAAAAq6oqPwAAAAAAAAA/AAAAAAAAAD+rqqo9AAAAP6uqqj2rqio/AACAPlVVVT+rqio+VVVVP6uqKj6rqio/q6oqPquqKj8AAIA+q6oqPwAAgD5VVVU/q6qqPauqKj+rqio+q6oqP6uqKj5VVVU/AACAPquqKj+rqio+q6oqP6uqKj4AAAA/q6oqPgAAAD8AAIA+AAAAPwAAgD6rqio/q6oqPquqKj+rqqo9q6oqP6uqqj0AAAA/q6qqPQAAAD+rqio+AAAAP6uqKj6rqio/VVXVPquqqj4AAAA/q6qqPgAAAD8AAAA/AAAAPwAAAD9VVdU+AAAAP1VV1T6rqqo+VVXVPquqKj4AAAA/q6oqPgAAAD+rqqo+AAAAP6uqqj5VVdU+q6qqPlVV1T6rqio+AAAAP6uqKj5VVdU+q6oqPlVV1T4AAAAAVVXVPquqKj6rqqo+q6oqPquqqj4AAAAAq6qqPquqKj5VVdU+q6oqPlVV1T6rqqo+q6qqPquqKj4AAIA+q6oqPgAAgD4AAAAAVVXVPgAAAD+rqqo+AAAAP6uqqj6rqqo+q6qqPquqqj5VVdU+q6qqPlVV1T4AAAA/q6qqPgAAAD8AAIA+AAAAPwAAgD6rqqo+AACAPquqqj6rqqo+q6qqPquqqj4AAAA/VVXVPquqqj6rqqo+q6qqPquqqj6rqio+AACAPquqKj6rqqo+q6oqPquqqj6rqqo+q6qqPquqqj4AAIA+q6qqPgAAgD6rqio+q6qqPQAAAD8AAAAAAAAAPwAAAACrqqo+AAAAAKuqqj6rqqo9q6qqPquqqj0AAAA/q6oqPquqKj6rqqo9q6oqPquqqj0AAAAAq6qqPauqKj4AAAAAq6oqPgAAAAAAAAAAq6qqPauqKj6rqio+q6oqPquqKj6rqqo+AACAPquqKj6rqio+q6oqPquqKj4AAAAAq6qqPauqqj4AAAAAq6qqPgAAAACrqio+AAAAAKuqKj6rqqo9q6oqPquqqj2rqqo+q6oqPquqqj6rqqo9q6qqPquqqj2rqio+AACAPgAAAD+rqio+AAAAP6uqKj6rqqo+q6oqPquqqj4AAIA+q6qqPgAAgD4AAAA/q6oqPgAAAD+rqqo9AAAAP6uqqj2rqqo+q6qqPauqqj6rqio+q6qqPquqKj4AAAA/q6oqPquqKj4AAIA+q6oqPgAAgD6rqqo+AACAPquqqj6rqio+q6qqPquqKj6rqio+"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 360,
+"vertex_data": PackedByteArray("rFwxvc3MTL2amZm9mpmZvc3MTL2sXDG9rFwxvaxcsb3NzMy8mpmZvc3MTL2sXDG9rFyxvc3MTL0wu5KjzcxMvaxcsb07bimjzcxMvaxcsb07bimjrFwxvaxcsb3NzMy8mpmZvc3MTL2sXDG9mpmZvc3MTL2sXDG9rFwxvc3MTL2amZm9zcxMvQAAAACsXLG9zcxMvQAAAACsXLG9rFyxvQAAAADNzEy9mpmZvc3MTL2sXDG9rFyxvc3MTL0wu5KjmpmZvc3MTL2sXDG9rFyxvQAAAADNzEy9rFyxvQAAAADNzEy9zczMvQAAAAA7bqmjrFyxvc3MTL0wu5KjQKRDI83MTL2sXLG9rFwxvc3MTL2amZm9zczMvKxcsb2sXDG9zczMvKxcsb2sXDG9UOjhIqxcsb3NzEy9QKRDI83MTL2sXLG9rFwxvaxcsb3NzMy8zcxMvaxcsb07bimjAAAAAM3MzL0AAAAArFwxvaxcsb3NzMy8zczMvKxcsb2sXDG9rFwxvc3MTL2amZm9UOjhIqxcsb3NzEy9zczMvKxcsb2sXDG9AAAAAM3MzL0AAAAAzczMvKxcsb2sXDG9rFwxvaxcsb3NzMy8AAAAAM3MzL0AAAAAUOhhIwAAAADNzMy9zcxMvQAAAACsXLG9rFwxvc3MTL2amZm9rFwxvc3MTL2amZm9QKRDI83MTL2sXLG9UOhhIwAAAADNzMy9rFyxvc3MTL0wu5KjmpmZvc3MTL2sXDE9rFwxvaxcsb3NzMw8rFwxvaxcsb3NzMw8zcxMvaxcsb07bimjrFyxvc3MTL0wu5KjmpmZvc3MTL2sXDE9rFyxvc3MTL0wu5KjzczMvQAAAAA7bqmjzczMvQAAAAA7bqmjrFyxvQAAAADNzEw9mpmZvc3MTL2sXDE9rFwxvc3MTL2amZk9mpmZvc3MTL2sXDE9rFyxvQAAAADNzEw9rFyxvQAAAADNzEw9zcxMvQAAAACsXLE9rFwxvc3MTL2amZk9zcxMvaxcsb07bimjrFwxvaxcsb3NzMw8AAAAAM3MzL0AAAAAzczMvKxcsb2sXDE9rFwxvaxcsb3NzMw8mpmZvc3MTL2sXDE9rFwxvaxcsb3NzMw8zczMvKxcsb2sXDE9AAAAAM3MzL0AAAAAzczMvKxcsb2sXDE9AAAAAKxcsb3NzEw9AAAAAM3MzL0AAAAAmpmZvc3MTL2sXDE9rFwxvc3MTL2amZk9zczMvKxcsb2sXDE9AAAAAKxcsb3NzEw9zczMvKxcsb2sXDE9rFwxvc3MTL2amZk9rFwxvc3MTL2amZk9AAAAAM3MTL2sXLE9AAAAAKxcsb3NzEw9AAAAAM3MTL2sXLE9rFwxvc3MTL2amZk9zcxMvQAAAACsXLE9zcxMvQAAAACsXLE9AAAAAAAAAADNzMw9AAAAAM3MTL2sXLE9rFyxvQAAAADNzEy9zcxMvQAAAACsXLG9rFwxvc3MTD2amZm9rFwxvc3MTD2amZm9mpmZvc3MTD2sXDG9rFyxvQAAAADNzEy9zczMvQAAAAA7bqmjrFyxvQAAAADNzEy9mpmZvc3MTD2sXDG9mpmZvc3MTD2sXDG9rFyxvc3MTD0wu5KjzczMvQAAAAA7bqmjrFyxvc3MTD0wu5KjmpmZvc3MTD2sXDG9rFwxvaxcsT3NzMy8rFwxvaxcsT3NzMy8zcxMvaxcsT07bimjrFyxvc3MTD0wu5KjQKRDI83MTD2sXLG9rFwxvc3MTD2amZm9zcxMvQAAAACsXLG9zcxMvQAAAACsXLG9UOhhIwAAAADNzMy9QKRDI83MTD2sXLG9mpmZvc3MTD2sXDG9rFwxvc3MTD2amZm9zczMvKxcsT2sXDG9rFwxvc3MTD2amZm9QKRDI83MTD2sXLG9UOjhIqxcsT3NzEy9UOjhIqxcsT3NzEy9zczMvKxcsT2sXDG9rFwxvc3MTD2amZm9zczMvKxcsT2sXDG9rFwxvaxcsT3NzMy8mpmZvc3MTD2sXDG9zcxMvaxcsT07bimjrFwxvaxcsT3NzMy8AAAAAM3MzD0AAAAAzczMvKxcsT2sXDG9UOjhIqxcsT3NzEy9AAAAAM3MzD0AAAAArFwxvaxcsT3NzMy8zczMvKxcsT2sXDG9AAAAAM3MzD0AAAAArFyxvQAAAADNzEw9zczMvQAAAAA7bqmjrFyxvc3MTD0wu5KjrFyxvc3MTD0wu5KjmpmZvc3MTD2sXDE9rFyxvQAAAADNzEw9zcxMvQAAAACsXLE9rFyxvQAAAADNzEw9mpmZvc3MTD2sXDE9mpmZvc3MTD2sXDE9rFwxvc3MTD2amZk9zcxMvQAAAACsXLE9mpmZvc3MTD2sXDE9rFyxvc3MTD0wu5KjzcxMvaxcsT07bimjzcxMvaxcsT07bimjrFwxvaxcsT3NzMw8mpmZvc3MTD2sXDE9rFwxvc3MTD2amZk9mpmZvc3MTD2sXDE9rFwxvaxcsT3NzMw8AAAAAAAAAADNzMw9zcxMvQAAAACsXLE9rFwxvc3MTD2amZk9rFwxvc3MTD2amZk9AAAAAM3MTD2sXLE9AAAAAAAAAADNzMw9rFwxvaxcsT3NzMw8zczMvKxcsT2sXDE9rFwxvc3MTD2amZk9rFwxvaxcsT3NzMw8zcxMvaxcsT07bimjAAAAAM3MzD0AAAAAzczMvKxcsT2sXDE9rFwxvaxcsT3NzMw8AAAAAM3MzD0AAAAAAAAAAKxcsT3NzEw9zczMvKxcsT2sXDE9AAAAAM3MzD0AAAAAAAAAAM3MTD2sXLE9rFwxvc3MTD2amZk9zczMvKxcsT2sXDE9zczMvKxcsT2sXDE9AAAAAKxcsT3NzEw9AAAAAM3MTD2sXLE9UOjhIqxcsb3NzEy9zczMPKxcsb2sXDG9rFwxPc3MTL2amZm9rFwxPc3MTL2amZm9QKRDI83MTL2sXLG9UOjhIqxcsb3NzEy9mpmZPc3MTL2sXDG9rFwxPc3MTL2amZm9zczMPKxcsb2sXDG9zczMPKxcsb2sXDG9UOjhIqxcsb3NzEy9AAAAAM3MzL0AAAAArFwxPaxcsb3NzMy8zczMPKxcsb2sXDG9AAAAAM3MzL0AAAAAzcxMPaxcsb1Q6GEirFwxPaxcsb3NzMy8AAAAAM3MzL0AAAAAzczMPKxcsb2sXDG9rFwxPaxcsb3NzMy8mpmZPc3MTL2sXDG9zcxMPQAAAACsXLG9UOhhIwAAAADNzMy9QKRDI83MTL2sXLG9QKRDI83MTL2sXLG9rFwxPc3MTL2amZm9zcxMPQAAAACsXLG9rFwxPaxcsb3NzMy8zcxMPaxcsb1Q6GEirFyxPc3MTL1ApMMirFyxPc3MTL1ApMMimpmZPc3MTL2sXDG9rFwxPaxcsb3NzMy8rFwxPc3MTL2amZm9mpmZPc3MTL2sXDG9rFyxPQAAAADNzEy9rFyxPQAAAADNzEy9zcxMPQAAAACsXLG9rFwxPc3MTL2amZm9mpmZPc3MTL2sXDG9rFyxPc3MTL1ApMMizczMPQAAAABQ6OEizczMPQAAAABQ6OEirFyxPQAAAADNzEy9mpmZPc3MTL2sXDG9zczMPKxcsb2sXDE9rFwxPaxcsb3NzMw8AAAAAM3MzL0AAAAAAAAAAKxcsb3NzEw9zczMPKxcsb2sXDE9AAAAAM3MzL0AAAAArFwxPaxcsb3NzMw8zcxMPaxcsb1Q6GEiAAAAAM3MzL0AAAAArFwxPaxcsb3NzMw8zczMPKxcsb2sXDE9rFwxPc3MTL2amZk9zczMPKxcsb2sXDE9AAAAAKxcsb3NzEw9AAAAAM3MTL2sXLE9AAAAAM3MTL2sXLE9rFwxPc3MTL2amZk9zczMPKxcsb2sXDE9rFwxPc3MTL2amZk9AAAAAM3MTL2sXLE9AAAAAAAAAADNzMw9AAAAAAAAAADNzMw9zcxMPQAAAACsXLE9rFwxPc3MTL2amZk9zcxMPaxcsb1Q6GEirFwxPaxcsb3NzMw8mpmZPc3MTL2sXDE9mpmZPc3MTL2sXDE9rFyxPc3MTL1ApMMizcxMPaxcsb1Q6GEirFwxPc3MTL2amZk9mpmZPc3MTL2sXDE9rFwxPaxcsb3NzMw8rFyxPc3MTL1ApMMimpmZPc3MTL2sXDE9rFyxPQAAAADNzEw9rFyxPQAAAADNzEw9zczMPQAAAABQ6OEirFyxPc3MTL1ApMMimpmZPc3MTL2sXDE9rFwxPc3MTL2amZk9zcxMPQAAAACsXLE9zcxMPQAAAACsXLE9rFyxPQAAAADNzEw9mpmZPc3MTL2sXDE9rFwxPc3MTD2amZm9QKRDI83MTD2sXLG9UOhhIwAAAADNzMy9UOhhIwAAAADNzMy9zcxMPQAAAACsXLG9rFwxPc3MTD2amZm9zczMPKxcsT2sXDG9UOjhIqxcsT3NzEy9QKRDI83MTD2sXLG9QKRDI83MTD2sXLG9rFwxPc3MTD2amZm9zczMPKxcsT2sXDG9UOjhIqxcsT3NzEy9zczMPKxcsT2sXDG9AAAAAM3MzD0AAAAAzczMPKxcsT2sXDG9rFwxPaxcsT3NzMy8AAAAAM3MzD0AAAAArFwxPaxcsT3NzMy8zczMPKxcsT2sXDG9rFwxPc3MTD2amZm9rFwxPaxcsT3NzMy8zcxMPaxcsT1Q6GEiAAAAAM3MzD0AAAAAzcxMPQAAAACsXLG9rFyxPQAAAADNzEy9mpmZPc3MTD2sXDG9mpmZPc3MTD2sXDG9rFwxPc3MTD2amZm9zcxMPQAAAACsXLG9rFyxPQAAAADNzEy9zczMPQAAAABQ6OEirFyxPc3MTD1ApMMirFyxPc3MTD1ApMMimpmZPc3MTD2sXDG9rFyxPQAAAADNzEy9rFwxPc3MTD2amZm9mpmZPc3MTD2sXDG9rFwxPaxcsT3NzMy8zcxMPaxcsT1Q6GEirFwxPaxcsT3NzMy8mpmZPc3MTD2sXDG9mpmZPc3MTD2sXDG9rFyxPc3MTD1ApMMizcxMPaxcsT1Q6GEizcxMPQAAAACsXLE9AAAAAAAAAADNzMw9AAAAAM3MTD2sXLE9AAAAAM3MTD2sXLE9rFwxPc3MTD2amZk9zcxMPQAAAACsXLE9rFwxPaxcsT3NzMw8zczMPKxcsT2sXDE9AAAAAM3MzD0AAAAAzczMPKxcsT2sXDE9AAAAAKxcsT3NzEw9AAAAAM3MzD0AAAAAzczMPKxcsT2sXDE9rFwxPaxcsT3NzMw8mpmZPc3MTD2sXDE9zcxMPaxcsT1Q6GEirFwxPaxcsT3NzMw8AAAAAM3MzD0AAAAArFwxPc3MTD2amZk9AAAAAM3MTD2sXLE9AAAAAKxcsT3NzEw9AAAAAKxcsT3NzEw9zczMPKxcsT2sXDE9rFwxPc3MTD2amZk9mpmZPc3MTD2sXDE9rFwxPc3MTD2amZk9zczMPKxcsT2sXDE9zczMPQAAAABQ6OEirFyxPQAAAADNzEw9mpmZPc3MTD2sXDE9mpmZPc3MTD2sXDE9rFyxPc3MTD1ApMMizczMPQAAAABQ6OEirFyxPQAAAADNzEw9zcxMPQAAAACsXLE9rFwxPc3MTD2amZk9rFwxPc3MTD2amZk9mpmZPc3MTD2sXDE9rFyxPQAAAADNzEw9rFwxPaxcsT3NzMw8zcxMPaxcsT1Q6GEirFyxPc3MTD1ApMMirFyxPc3MTD1ApMMimpmZPc3MTD2sXDE9rFwxPaxcsT3NzMw8PiY3IJEutL8NJmM4tVC0v0ZDNSQGUXG+DSZjOLVQtL+ZLldQy36av4dL9zCzfeu9h0v3MLN9671GQzUkBlFxvg0mYzi1ULS/DSZjOLVQtL8+JjcgkS60vwAAJdHZLv+/AAAl0dku/78AACVRJVH/vw0mYzi1ULS/mS5XUMt+mr8NJmM4tVC0vwAAJVElUf+/AAAlUSVR/78AAP9//3//v5kuV1DLfpq/ZdEOAckAAL8+JjcgkS60v39EcxORL22+f0RzE5Evbb53tIEDJgTFvGXRDgHJAAC/RkM1JAZRcb6HS/cws33rvf9/AADyZP+/RkM1JAZRcb5/RHMTkS9tvj4mNyCRLrS/d7SBAyYExbx/RHMTkS9tvv9/AAAMG/+/f0RzE5Evbb5GQzUkBlFxvv9/AAD/P/+//////wAA/78AACXR2S7/vz4mNyCRLrS/PiY3IJEutL9l0Q4ByQAAv/////8AAP+/mS5XUMt+mr91RsFZ+620v/NXfzttrG2+81d/O22sbb6HS/cws33rvZkuV1DLfpq/dUbBWfuttL+ZLldQy36avwAA/3//f/+/AAD/f/9//7/ZLv9/2a7/v3VGwVn7rbS/cV7xWSDQtL91RsFZ+620v9ku/3/Zrv+/2S7/f9mu/78lUf9/JdH/v3Fe8Vkg0LS/h0v3MLN9673zV387baxtvv9/AAAMm/+/fGe4POrNcb7zV387baxtvnVGwVn7rbS/81d/O22sbb58Z7g86s1xvv9/AAD/v/+/fGe4POrNcb5+fHg0mOJkxP9/AADy5P+/dUbBWfuttL9xXvFZINC0v3xnuDzqzXG+fnx4NJjiZMR8Z7g86s1xvnFe8Vkg0LS/cV7xWSDQtL/wfmZRy+vwxX58eDSY4mTE8H5mUcvr8MVxXvFZINC0vyVR/38l0f+/JVH/fyXR/7//f/9/////v/B+ZlHL6/DFAAAlUSVR/78AACXR2S7/vw0mcd7eL7S/DSZx3t4vtL8+JnXGA1K0vwAAJVElUf+/AAD/f/9//78AACVRJVH/vz4mdcYDUrS/PiZ1xgNStL+nL5iuM4GavwAA/3//f/+/py+YrjOBmr8+JnXGA1K0v39E8teRU22+f0Ty15FTbb4IT4bLS4LrvacvmK4zgZq/mS7w/v0Bmr8NJnHe3i+0vwAAJdHZLv+/AAAl0dku/7//////AAD/v5ku8P79AZq/PiZ1xgNStL8NJnHe3i+0v0ZDfOcUMnG+DSZx3t4vtL+ZLvD+/QGav4dLffxyBuu9h0t9/HIG671GQ3znFDJxvg0mcd7eL7S/RkN85xQycb5/RPLXkVNtvj4mdcYDUrS/CE+Gy0uC671/RPLXkVNtvv9////yZP+/RkN85xQycb6HS338cgbrvf9///8MG/+/f0Ty15FTbb5GQ3znFDJxvv9/////P/+/2S7/f9mu/78AAP9//3//v6cvmK4zgZq/py+YrjOBmr+bRw2mSa+0v9ku/3/Zrv+/JVH/fyXR/7/ZLv9/2a7/v5tHDaZJr7S/m0cNpkmvtL/IXz2mbdG0vyVR/38l0f+/m0cNpkmvtL+nL5iuM4GavwhPhstLguu9CE+Gy0uC673JW0bD+K5xvptHDaZJr7S/yF89pm3RtL+bRw2mSa+0v8lbRsP4rnG+/3//f////78lUf9/JdH/v8hfPaZt0bS/yF89pm3RtL8OgZiuduxcuf9//3////+/yVtGw/iucb6MbH/EbdBtvshfPaZt0bS/yVtGw/iucb4IT4bLS4Lrvf9///8Mm/+/jGx/xG3Qbb7JW0bD+K5xvv9/////v/+/gIOGy5/gd7iMbH/EbdBtvv9////y5P+/DoGYrnbsXLnIXz2mbdG0v4xsf8Rt0G2+jGx/xG3Qbb6Ag4bLn+B3uA6BmK527Fy5d7SBAyYExby4vIIYGwP1pvHZjSGUAA+o8dmNIZQAD6hl0Q4ByQAAv3e0gQMmBMW8wNmJOZUA/Zbx2Y0hlAAPqLi8ghgbA/WmuLyCGBsD9aZ3tIEDJgTFvP9/AAAAAHiyf7sMKCMDNpa4vIIYGwP1pv9/AAAAAP+f9rB4NNj7JYF/uwwoIwM2lv9/AAAAAIWNuLyCGBsD9aZ/uwwoIwM2lsDZiTmVAP2W///ZLgAAbNf/////AAD/v2XRDgHJAAC/ZdEOAckAAL/x2Y0hlAAPqP//2S4AAGzXf7sMKCMDNpb2sHg02PslgVfQZlE1/5mAV9BmUTX/mYDA2Yk5lQD9ln+7DCgjAzaW8dmNIZQAD6jA2Yk5lQD9lv//2a4AAGyX///ZrgAAbJf//9kuAABs1/HZjSGUAA+owNmJOZUA/ZZX0GZRNf+ZgP///3///wCA////f///AID//9muAABsl8DZiTmVAP2WcpN/O9v8Nqg1pLg84/x7l/9/AAD////ffnx4NO/wT7Byk3872/w2qP9/AAD//4XNNaS4POP8e5f2sHg02Pslgf9/AAD//4WNNaS4POP8e5dyk3872/w2qDagwVlp/7aocpN/O9v8Nqh+fHg07/BPsPB+ZlG68jq28H5mUbryOrY2oMFZaf+2qHKTfzvb/DaoNqDBWWn/tqjwfmZRuvI6tv9//3////+//3//f////7/Zrv9///+SqDagwVlp/7ao9rB4NNj7JYE1pLg84/x7l2O48Vlq/6SXY7jxWWr/pJdX0GZRNf+ZgPaweDTY+yWBNqDBWWn/tqhjuPFZav+klzWkuDzj/HuXV9BmUTX/mYBjuPFZav+klyXR/3///2yXJdH/f///bJf///9///8AgFfQZlE1/5mAY7jxWWr/pJc2oMFZaf+2qNmu/3///5Ko2a7/f///kqgl0f9///9sl2O48Vlq/6SXwNnH35UAtqiZLvD+/QGav/////8AAP+//////wAA/7///9kuAABs18DZx9+VALaof7uL7CMDNqiHS338cgbrvZku8P79AZq/mS7w/v0Bmr/A2cfflQC2qH+7i+wjAzaoh0t9/HIG671/u4vsIwM2qP9///8AAIXNf7uL7CMDNqi4vMnbGwN7l/9///8AAP/fuLzJ2xsDe5d/u4vsIwM2qMDZx9+VALaouLzJ2xsDe5d3tAfPJgQlgf9///8AAHjy///ZLgAAbNf//9muAABsl/HZm8eUAKSX8dmbx5QApJfA2cfflQC2qP//2S4AAGzX///ZrgAAbJf///9///8AgGXRp6/JAJmAZdGnr8kAmYDx2ZvHlACkl///2a4AAGyXwNnH35UAtqjx2ZvHlACkl7i8ydsbA3uXd7QHzyYEJYG4vMnbGwN7l/HZm8eUAKSX8dmbx5QApJdl0aevyQCZgHe0B88mBCWB2a7/f///kqj/f/9/////vw6BmK4b9BnKDoGYrhv0GcqNoQ2mav8PqNmu/3///5KoC6h/xNv8NpaCmEbD4/z1pv9///////+fgphGw+P89aaAg4bLNfeyzv9//////3iygphGw+P89aYLqH/E2/w2lom5PaZp//2Wd7QHzyYEJYELqH/E2/w2lv9//////3jyjaENpmr/D6gOgZiuG/QZyoCDhss197LOgIOGyzX3ss6CmEbD4/z1po2hDaZq/w+oibk9pmn//ZaNoQ2mav8PqIKYRsPj/PWm////f///AIAl0f9///9sl4m5PaZp//2Wibk9pmn//ZZl0aevyQCZgP///3///wCAJdH/f///bJfZrv9///+SqI2hDaZq/w+ojaENpmr/D6iJuT2maf/9liXR/3///2yXC6h/xNv8NpZ3tAfPJgQlgWXRp6/JAJmAZdGnr8kAmYCJuT2maf/9lguof8Tb/DaW")
+}]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jgd8i"]
-animation = &"firing_rifle"
+animation = &"rifle/fire"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lv4bx"]
-animation = &"actual_rifle_aim"
+animation = &"rifle/aim"
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_jgd8i"]
 filter_enabled = true
 filters = ["", "Skeleton3D:mixamorig_Head", "Skeleton3D:mixamorig_Hips", "Skeleton3D:mixamorig_LeftArm", "Skeleton3D:mixamorig_LeftForeArm", "Skeleton3D:mixamorig_LeftHand", "Skeleton3D:mixamorig_LeftHandIndex1", "Skeleton3D:mixamorig_LeftHandIndex2", "Skeleton3D:mixamorig_LeftHandIndex3", "Skeleton3D:mixamorig_LeftHandThumb1", "Skeleton3D:mixamorig_LeftHandThumb2", "Skeleton3D:mixamorig_LeftHandThumb3", "Skeleton3D:mixamorig_LeftShoulder", "Skeleton3D:mixamorig_Neck", "Skeleton3D:mixamorig_RightArm", "Skeleton3D:mixamorig_RightForeArm", "Skeleton3D:mixamorig_RightHand", "Skeleton3D:mixamorig_RightHandIndex1", "Skeleton3D:mixamorig_RightHandIndex2", "Skeleton3D:mixamorig_RightHandIndex3", "Skeleton3D:mixamorig_RightHandThumb1", "Skeleton3D:mixamorig_RightHandThumb2", "Skeleton3D:mixamorig_RightHandThumb3", "Skeleton3D:mixamorig_RightShoulder", "Skeleton3D:mixamorig_Spine", "Skeleton3D:mixamorig_Spine1", "Skeleton3D:mixamorig_Spine2"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kyfeq"]
-animation = &"sprint_rifle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yybc7"]
-animation = &"falling"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fpo3a"]
-animation = &"actual_rifle_aim"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5mkjs"]
-animation = &"rifle_walk"
+animation = &"rifle/walk"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7b6hw"]
-animation = &"falling"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_on558"]
+animation = &"rifle/run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gqopd"]
+animation = &"rifle/aim"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_icpky"]
+animation = &"basic/fall"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_lv4bx"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_kyfeq")
-blend_point_0/pos = Vector2(1, 0)
-blend_point_0/name = &"sprint_rifle"
-blend_point_1/node = SubResource("AnimationNodeAnimation_yybc7")
-blend_point_1/pos = Vector2(0, -1)
-blend_point_1/name = &"falling"
-blend_point_2/node = SubResource("AnimationNodeAnimation_fpo3a")
+blend_point_0/node = SubResource("AnimationNodeAnimation_5mkjs")
+blend_point_0/pos = Vector2(0.2, 0)
+blend_point_0/name = &"rifle_walk"
+blend_point_1/node = SubResource("AnimationNodeAnimation_on558")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_1/name = &"rifle_run"
+blend_point_2/node = SubResource("AnimationNodeAnimation_gqopd")
 blend_point_2/pos = Vector2(0, 0)
-blend_point_2/name = &"actual_rifle_aim"
-blend_point_3/node = SubResource("AnimationNodeAnimation_5mkjs")
-blend_point_3/pos = Vector2(0.2, 0)
-blend_point_3/name = &"rifle_walk"
-blend_point_4/node = SubResource("AnimationNodeAnimation_7b6hw")
-blend_point_4/pos = Vector2(0, 1)
-blend_point_4/name = &"falling 2"
+blend_point_2/name = &"rifle_aim"
+blend_point_3/node = SubResource("AnimationNodeAnimation_icpky")
+blend_point_3/pos = Vector2(0, -1)
+blend_point_3/name = &"basic_fall"
+triangles = PackedInt32Array(0, 2, 3, 0, 1, 3)
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_7b6hw"]
 filter_enabled = true
@@ -247,7 +218,7 @@ fadeout_time = 0.1
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_4cx7u"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_58jvb"]
-graph_offset = Vector2(122.04437, 191.81592)
+graph_offset = Vector2(-257.31705, 98.72327)
 nodes/output/position = Vector2(840, 140)
 nodes/BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_lv4bx")
 nodes/BlendSpace2D/position = Vector2(80, 100)
@@ -288,9 +259,10 @@ blend_point_2/name = &"falling"
 blend_point_3/node = SubResource("AnimationNodeAnimation_d2agh")
 blend_point_3/pos = Vector2(0.2, 0)
 blend_point_3/name = &"idle_walking"
+triangles = PackedInt32Array(1, 2, 3, 0, 2, 3)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_8l73k"]
-graph_offset = Vector2(-427.5182, -24.933212)
+graph_offset = Vector2(-678.5937, 51.394806)
 nodes/BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_fpo3a")
 nodes/BlendSpace2D/position = Vector2(-260, 80)
 node_connections = [&"output", 0, &"BlendSpace2D"]
@@ -310,20 +282,38 @@ states/Unarmed/node = SubResource("AnimationNodeBlendTree_8l73k")
 states/Unarmed/position = Vector2(353, 100)
 transitions = ["Start", "Unarmed", SubResource("AnimationNodeStateMachineTransition_aqrcq"), "Unarmed", "RifleArmed", SubResource("AnimationNodeStateMachineTransition_d2agh"), "RifleArmed", "Unarmed", SubResource("AnimationNodeStateMachineTransition_fpo3a")]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3jg8h"]
-radius = 0.3
-height = 1.8
+[sub_resource type="Animation" id="Animation_gqopd"]
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton3D:mixamorig_LeftForeArm")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.134795, -0.041634, 0.403593, 0.903997)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_exd8k"]
-_surfaces = [{
-"aabb": AABB(-0.1, -0.1, -0.1, 0.2, 0.2, 0.2),
-"attribute_data": PackedByteArray("VVUVP6uqKj+rqio/q6oqP6uqKj9VVVU/q6oqP6uqKj8AAEA/q6oqPwAAQD9VVVU/AABAP1VVVT+rqio/VVVVP6uqKj+rqio/q6oqP6uqKj9VVRU/q6oqP1VVFT8AAAA/VVUVPwAAAD+rqio/AAAAP6uqKj+rqio/AABAP6uqKj+rqio/q6oqP6uqKj8AAAA/q6oqPwAAAD8AAEA/AAAAPwAAQD+rqio/AAAAP6uqKj9VVRU/q6oqP1VVFT9VVVU/VVUVP1VVVT8AAAA/VVVVPwAAAD+rqio/q6oqP1VVVT8AAEA/VVVVPwAAQD8AAIA/q6oqP1VVVT9VVRU/VVVVP1VVFT+rqio/AAAAP1VVVT9VVRU/VVVVP1VVFT8AAIA/VVUVP1VVVT+rqio/VVVVP6uqKj8AAIA/AAAAPwAAAD9VVRU/AAAAP1VVFT+rqio/VVUVP6uqKj8AAAA/q6oqPwAAAD8AAAA/AABAP6uqKj9VVVU/q6oqP1VVVT9VVVU/VVVVP1VVVT8AAEA/VVVVPwAAQD+rqio/VVVVP6uqKj8AAEA/q6oqPwAAQD8AAAA/AABAPwAAAD9VVVU/AAAAP1VVVT+rqio/q6pqP6uqKj9VVVU/q6oqP1VVVT8AAAA/VVVVPwAAAD+rqmo/AAAAP6uqaj+rqio/AABAP1VVVT9VVVU/VVVVP1VVVT8AAIA/q6pqP1VVVT9VVVU/VVVVP1VVVT+rqio/VVVVP1VVVT+rqmo/VVVVP6uqaj8AAIA/q6pqP1VVVT8AAIA/VVVVPwAAgD8AAIA/VVVVP6uqKj+rqmo/q6oqP6uqaj9VVVU/AACAP1VVVT+rqmo/VVVVP6uqaj+rqio/q6pqP6uqKj8AAIA/q6oqPwAAgD9VVVU/AACAP6uqKj+rqmo/q6oqP6uqaj8AAAA/q6pqPwAAAD8AAIA/AAAAPwAAgD+rqio/q6oqPwAAAD9VVRU/AAAAP1VVFT+rqqo+VVUVP6uqqj6rqio/q6qqPquqKj8AAAA/AABAPwAAAD+rqio/AAAAP6uqKj+rqqo+q6oqP6uqqj4AAEA/q6qqPgAAQD8AAAA/AABAP6uqqj6rqio/q6qqPquqKj+rqio+q6oqP6uqKj4AAEA/q6oqPgAAQD+rqqo+AAAAP6uqqj5VVRU/q6qqPlVVFT8AAAA/VVUVPwAAAD8AAAA/AAAAPwAAAD+rqqo+q6oqP6uqqj5VVRU/q6qqPlVVFT+rqio+VVUVP6uqqj4AAAA/q6qqPgAAAD+rqio+AAAAP6uqKj5VVRU/q6oqPlVVFT+rqqo+VVUVP6uqKj6rqio/q6oqPquqKj+rqqo+AABAP6uqKj6rqio/q6oqPquqKj8AAAAAVVUVP6uqKj4AAAA/q6oqPgAAAD8AAAAAq6oqP6uqKj5VVRU/q6oqPlVVFT8AAAAAVVVVPwAAAD8AAEA/AAAAPwAAQD+rqqo+AABAP6uqqj5VVVU/q6qqPlVVVT8AAAA/q6pqPwAAAD9VVVU/AAAAP1VVVT+rqqo+VVVVP6uqqj6rqmo/q6qqPquqaj8AAAA/VVVVP6uqqj4AAEA/q6qqPgAAQD+rqio+AABAP6uqKj5VVVU/q6oqPlVVVT+rqqo+q6pqP6uqqj5VVVU/q6qqPlVVVT+rqio+AACAPwAAAD+rqmo/AAAAP6uqaj+rqqo+q6pqP6uqqj4AAIA/q6qqPgAAgD8AAAA/VVVVP6uqKj6rqmo/q6oqPquqaj+rqqo+VVVVP6uqKj4AAEA/q6oqPgAAQD8AAAAAq6pqP6uqKj5VVVU/q6oqPlVVVT8AAAAAAACAP6uqKj6rqmo/q6oqPquqaj8AAAAAAACAP6uqqj6rqmo/q6qqPquqaj+rqio+q6pqP6uqKj4AAIA/q6oqPgAAgD+rqqo+AAAAP1VVVT9VVdU+VVVVP1VV1T6rqio/VVXVPquqKj8AAAA/q6oqPwAAAD9VVVU/q6qqPquqKj9VVdU+q6oqP1VV1T5VVVU/VVXVPlVVVT8AAAA/VVVVPwAAAD8AAIA/q6qqPlVVVT9VVdU+VVVVP1VV1T4AAIA/AACAPlVVVT+rqqo+VVVVP6uqqj4AAIA/VVXVPlVVVT+rqqo+VVVVP6uqqj6rqio/VVXVPgAAAD8AAAA/AAAAPwAAAD+rqio/AAAAP6uqKj9VVdU+q6oqP1VV1T4AAAA/q6qqPlVVVT8AAIA+VVVVPwAAgD6rqio/AACAPquqKj+rqqo+q6oqP6uqqj5VVVU/VVXVPquqKj+rqqo+q6oqP6uqqj4AAAA/q6qqPgAAAD9VVdU+AAAAP1VV1T6rqio/q6qqPquqKj8AAIA+q6oqPwAAgD4AAAA/AACAPgAAAD+rqqo+AAAAP6uqqj6rqio/q6qqPVVVVT+rqio+VVVVP6uqKj4AAIA/AAAAAFVVVT+rqqo9VVVVP6uqqj0AAIA/q6oqPlVVVT8AAIA+VVVVPwAAgD4AAIA/q6oqPlVVVT+rqqo9VVVVP6uqqj2rqio/q6qqPVVVVT8AAAAAVVVVPwAAAACrqio/AAAAAKuqKj+rqqo9q6oqP6uqqj1VVVU/q6qqPauqKj8AAAAAq6oqPwAAAAAAAAA/AAAAAAAAAD+rqqo9AAAAP6uqqj2rqio/AACAPlVVVT+rqio+VVVVP6uqKj6rqio/q6oqPquqKj8AAIA+q6oqPwAAgD5VVVU/q6qqPauqKj+rqio+q6oqP6uqKj5VVVU/AACAPquqKj+rqio+q6oqP6uqKj4AAAA/q6oqPgAAAD8AAIA+AAAAPwAAgD6rqio/q6oqPquqKj+rqqo9q6oqP6uqqj0AAAA/q6qqPQAAAD+rqio+AAAAP6uqKj6rqio/VVXVPquqqj4AAAA/q6qqPgAAAD8AAAA/AAAAPwAAAD9VVdU+AAAAP1VV1T6rqqo+VVXVPquqKj4AAAA/q6oqPgAAAD+rqqo+AAAAP6uqqj5VVdU+q6qqPlVV1T6rqio+AAAAP6uqKj5VVdU+q6oqPlVV1T4AAAAAVVXVPquqKj6rqqo+q6oqPquqqj4AAAAAq6qqPquqKj5VVdU+q6oqPlVV1T6rqqo+q6qqPquqKj4AAIA+q6oqPgAAgD4AAAAAVVXVPgAAAD+rqqo+AAAAP6uqqj6rqqo+q6qqPquqqj5VVdU+q6qqPlVV1T4AAAA/q6qqPgAAAD8AAIA+AAAAPwAAgD6rqqo+AACAPquqqj6rqqo+q6qqPquqqj4AAAA/VVXVPquqqj6rqqo+q6qqPquqqj6rqio+AACAPquqKj6rqqo+q6oqPquqqj6rqqo+q6qqPquqqj4AAIA+q6qqPgAAgD6rqio+q6qqPQAAAD8AAAAAAAAAPwAAAACrqqo+AAAAAKuqqj6rqqo9q6qqPquqqj0AAAA/q6oqPquqKj6rqqo9q6oqPquqqj0AAAAAq6qqPauqKj4AAAAAq6oqPgAAAAAAAAAAq6qqPauqKj6rqio+q6oqPquqKj6rqqo+AACAPquqKj6rqio+q6oqPquqKj4AAAAAq6qqPauqqj4AAAAAq6qqPgAAAACrqio+AAAAAKuqKj6rqqo9q6oqPquqqj2rqqo+q6oqPquqqj6rqqo9q6qqPquqqj2rqio+AACAPgAAAD+rqio+AAAAP6uqKj6rqqo+q6oqPquqqj4AAIA+q6qqPgAAgD4AAAA/q6oqPgAAAD+rqqo9AAAAP6uqqj2rqqo+q6qqPauqqj6rqio+q6qqPquqKj4AAAA/q6oqPquqKj4AAIA+q6oqPgAAgD6rqqo+AACAPquqqj6rqio+q6qqPquqKj6rqio+"),
-"format": 34359738391,
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 360,
-"vertex_data": PackedByteArray("rFwxvc3MTL2amZm9mpmZvc3MTL2sXDG9rFwxvaxcsb3NzMy8mpmZvc3MTL2sXDG9rFyxvc3MTL0wu5KjzcxMvaxcsb07bimjzcxMvaxcsb07bimjrFwxvaxcsb3NzMy8mpmZvc3MTL2sXDG9mpmZvc3MTL2sXDG9rFwxvc3MTL2amZm9zcxMvQAAAACsXLG9zcxMvQAAAACsXLG9rFyxvQAAAADNzEy9mpmZvc3MTL2sXDG9rFyxvc3MTL0wu5KjmpmZvc3MTL2sXDG9rFyxvQAAAADNzEy9rFyxvQAAAADNzEy9zczMvQAAAAA7bqmjrFyxvc3MTL0wu5KjQKRDI83MTL2sXLG9rFwxvc3MTL2amZm9zczMvKxcsb2sXDG9zczMvKxcsb2sXDG9UOjhIqxcsb3NzEy9QKRDI83MTL2sXLG9rFwxvaxcsb3NzMy8zcxMvaxcsb07bimjAAAAAM3MzL0AAAAArFwxvaxcsb3NzMy8zczMvKxcsb2sXDG9rFwxvc3MTL2amZm9UOjhIqxcsb3NzEy9zczMvKxcsb2sXDG9AAAAAM3MzL0AAAAAzczMvKxcsb2sXDG9rFwxvaxcsb3NzMy8AAAAAM3MzL0AAAAAUOhhIwAAAADNzMy9zcxMvQAAAACsXLG9rFwxvc3MTL2amZm9rFwxvc3MTL2amZm9QKRDI83MTL2sXLG9UOhhIwAAAADNzMy9rFyxvc3MTL0wu5KjmpmZvc3MTL2sXDE9rFwxvaxcsb3NzMw8rFwxvaxcsb3NzMw8zcxMvaxcsb07bimjrFyxvc3MTL0wu5KjmpmZvc3MTL2sXDE9rFyxvc3MTL0wu5KjzczMvQAAAAA7bqmjzczMvQAAAAA7bqmjrFyxvQAAAADNzEw9mpmZvc3MTL2sXDE9rFwxvc3MTL2amZk9mpmZvc3MTL2sXDE9rFyxvQAAAADNzEw9rFyxvQAAAADNzEw9zcxMvQAAAACsXLE9rFwxvc3MTL2amZk9zcxMvaxcsb07bimjrFwxvaxcsb3NzMw8AAAAAM3MzL0AAAAAzczMvKxcsb2sXDE9rFwxvaxcsb3NzMw8mpmZvc3MTL2sXDE9rFwxvaxcsb3NzMw8zczMvKxcsb2sXDE9AAAAAM3MzL0AAAAAzczMvKxcsb2sXDE9AAAAAKxcsb3NzEw9AAAAAM3MzL0AAAAAmpmZvc3MTL2sXDE9rFwxvc3MTL2amZk9zczMvKxcsb2sXDE9AAAAAKxcsb3NzEw9zczMvKxcsb2sXDE9rFwxvc3MTL2amZk9rFwxvc3MTL2amZk9AAAAAM3MTL2sXLE9AAAAAKxcsb3NzEw9AAAAAM3MTL2sXLE9rFwxvc3MTL2amZk9zcxMvQAAAACsXLE9zcxMvQAAAACsXLE9AAAAAAAAAADNzMw9AAAAAM3MTL2sXLE9rFyxvQAAAADNzEy9zcxMvQAAAACsXLG9rFwxvc3MTD2amZm9rFwxvc3MTD2amZm9mpmZvc3MTD2sXDG9rFyxvQAAAADNzEy9zczMvQAAAAA7bqmjrFyxvQAAAADNzEy9mpmZvc3MTD2sXDG9mpmZvc3MTD2sXDG9rFyxvc3MTD0wu5KjzczMvQAAAAA7bqmjrFyxvc3MTD0wu5KjmpmZvc3MTD2sXDG9rFwxvaxcsT3NzMy8rFwxvaxcsT3NzMy8zcxMvaxcsT07bimjrFyxvc3MTD0wu5KjQKRDI83MTD2sXLG9rFwxvc3MTD2amZm9zcxMvQAAAACsXLG9zcxMvQAAAACsXLG9UOhhIwAAAADNzMy9QKRDI83MTD2sXLG9mpmZvc3MTD2sXDG9rFwxvc3MTD2amZm9zczMvKxcsT2sXDG9rFwxvc3MTD2amZm9QKRDI83MTD2sXLG9UOjhIqxcsT3NzEy9UOjhIqxcsT3NzEy9zczMvKxcsT2sXDG9rFwxvc3MTD2amZm9zczMvKxcsT2sXDG9rFwxvaxcsT3NzMy8mpmZvc3MTD2sXDG9zcxMvaxcsT07bimjrFwxvaxcsT3NzMy8AAAAAM3MzD0AAAAAzczMvKxcsT2sXDG9UOjhIqxcsT3NzEy9AAAAAM3MzD0AAAAArFwxvaxcsT3NzMy8zczMvKxcsT2sXDG9AAAAAM3MzD0AAAAArFyxvQAAAADNzEw9zczMvQAAAAA7bqmjrFyxvc3MTD0wu5KjrFyxvc3MTD0wu5KjmpmZvc3MTD2sXDE9rFyxvQAAAADNzEw9zcxMvQAAAACsXLE9rFyxvQAAAADNzEw9mpmZvc3MTD2sXDE9mpmZvc3MTD2sXDE9rFwxvc3MTD2amZk9zcxMvQAAAACsXLE9mpmZvc3MTD2sXDE9rFyxvc3MTD0wu5KjzcxMvaxcsT07bimjzcxMvaxcsT07bimjrFwxvaxcsT3NzMw8mpmZvc3MTD2sXDE9rFwxvc3MTD2amZk9mpmZvc3MTD2sXDE9rFwxvaxcsT3NzMw8AAAAAAAAAADNzMw9zcxMvQAAAACsXLE9rFwxvc3MTD2amZk9rFwxvc3MTD2amZk9AAAAAM3MTD2sXLE9AAAAAAAAAADNzMw9rFwxvaxcsT3NzMw8zczMvKxcsT2sXDE9rFwxvc3MTD2amZk9rFwxvaxcsT3NzMw8zcxMvaxcsT07bimjAAAAAM3MzD0AAAAAzczMvKxcsT2sXDE9rFwxvaxcsT3NzMw8AAAAAM3MzD0AAAAAAAAAAKxcsT3NzEw9zczMvKxcsT2sXDE9AAAAAM3MzD0AAAAAAAAAAM3MTD2sXLE9rFwxvc3MTD2amZk9zczMvKxcsT2sXDE9zczMvKxcsT2sXDE9AAAAAKxcsT3NzEw9AAAAAM3MTD2sXLE9UOjhIqxcsb3NzEy9zczMPKxcsb2sXDG9rFwxPc3MTL2amZm9rFwxPc3MTL2amZm9QKRDI83MTL2sXLG9UOjhIqxcsb3NzEy9mpmZPc3MTL2sXDG9rFwxPc3MTL2amZm9zczMPKxcsb2sXDG9zczMPKxcsb2sXDG9UOjhIqxcsb3NzEy9AAAAAM3MzL0AAAAArFwxPaxcsb3NzMy8zczMPKxcsb2sXDG9AAAAAM3MzL0AAAAAzcxMPaxcsb1Q6GEirFwxPaxcsb3NzMy8AAAAAM3MzL0AAAAAzczMPKxcsb2sXDG9rFwxPaxcsb3NzMy8mpmZPc3MTL2sXDG9zcxMPQAAAACsXLG9UOhhIwAAAADNzMy9QKRDI83MTL2sXLG9QKRDI83MTL2sXLG9rFwxPc3MTL2amZm9zcxMPQAAAACsXLG9rFwxPaxcsb3NzMy8zcxMPaxcsb1Q6GEirFyxPc3MTL1ApMMirFyxPc3MTL1ApMMimpmZPc3MTL2sXDG9rFwxPaxcsb3NzMy8rFwxPc3MTL2amZm9mpmZPc3MTL2sXDG9rFyxPQAAAADNzEy9rFyxPQAAAADNzEy9zcxMPQAAAACsXLG9rFwxPc3MTL2amZm9mpmZPc3MTL2sXDG9rFyxPc3MTL1ApMMizczMPQAAAABQ6OEizczMPQAAAABQ6OEirFyxPQAAAADNzEy9mpmZPc3MTL2sXDG9zczMPKxcsb2sXDE9rFwxPaxcsb3NzMw8AAAAAM3MzL0AAAAAAAAAAKxcsb3NzEw9zczMPKxcsb2sXDE9AAAAAM3MzL0AAAAArFwxPaxcsb3NzMw8zcxMPaxcsb1Q6GEiAAAAAM3MzL0AAAAArFwxPaxcsb3NzMw8zczMPKxcsb2sXDE9rFwxPc3MTL2amZk9zczMPKxcsb2sXDE9AAAAAKxcsb3NzEw9AAAAAM3MTL2sXLE9AAAAAM3MTL2sXLE9rFwxPc3MTL2amZk9zczMPKxcsb2sXDE9rFwxPc3MTL2amZk9AAAAAM3MTL2sXLE9AAAAAAAAAADNzMw9AAAAAAAAAADNzMw9zcxMPQAAAACsXLE9rFwxPc3MTL2amZk9zcxMPaxcsb1Q6GEirFwxPaxcsb3NzMw8mpmZPc3MTL2sXDE9mpmZPc3MTL2sXDE9rFyxPc3MTL1ApMMizcxMPaxcsb1Q6GEirFwxPc3MTL2amZk9mpmZPc3MTL2sXDE9rFwxPaxcsb3NzMw8rFyxPc3MTL1ApMMimpmZPc3MTL2sXDE9rFyxPQAAAADNzEw9rFyxPQAAAADNzEw9zczMPQAAAABQ6OEirFyxPc3MTL1ApMMimpmZPc3MTL2sXDE9rFwxPc3MTL2amZk9zcxMPQAAAACsXLE9zcxMPQAAAACsXLE9rFyxPQAAAADNzEw9mpmZPc3MTL2sXDE9rFwxPc3MTD2amZm9QKRDI83MTD2sXLG9UOhhIwAAAADNzMy9UOhhIwAAAADNzMy9zcxMPQAAAACsXLG9rFwxPc3MTD2amZm9zczMPKxcsT2sXDG9UOjhIqxcsT3NzEy9QKRDI83MTD2sXLG9QKRDI83MTD2sXLG9rFwxPc3MTD2amZm9zczMPKxcsT2sXDG9UOjhIqxcsT3NzEy9zczMPKxcsT2sXDG9AAAAAM3MzD0AAAAAzczMPKxcsT2sXDG9rFwxPaxcsT3NzMy8AAAAAM3MzD0AAAAArFwxPaxcsT3NzMy8zczMPKxcsT2sXDG9rFwxPc3MTD2amZm9rFwxPaxcsT3NzMy8zcxMPaxcsT1Q6GEiAAAAAM3MzD0AAAAAzcxMPQAAAACsXLG9rFyxPQAAAADNzEy9mpmZPc3MTD2sXDG9mpmZPc3MTD2sXDG9rFwxPc3MTD2amZm9zcxMPQAAAACsXLG9rFyxPQAAAADNzEy9zczMPQAAAABQ6OEirFyxPc3MTD1ApMMirFyxPc3MTD1ApMMimpmZPc3MTD2sXDG9rFyxPQAAAADNzEy9rFwxPc3MTD2amZm9mpmZPc3MTD2sXDG9rFwxPaxcsT3NzMy8zcxMPaxcsT1Q6GEirFwxPaxcsT3NzMy8mpmZPc3MTD2sXDG9mpmZPc3MTD2sXDG9rFyxPc3MTD1ApMMizcxMPaxcsT1Q6GEizcxMPQAAAACsXLE9AAAAAAAAAADNzMw9AAAAAM3MTD2sXLE9AAAAAM3MTD2sXLE9rFwxPc3MTD2amZk9zcxMPQAAAACsXLE9rFwxPaxcsT3NzMw8zczMPKxcsT2sXDE9AAAAAM3MzD0AAAAAzczMPKxcsT2sXDE9AAAAAKxcsT3NzEw9AAAAAM3MzD0AAAAAzczMPKxcsT2sXDE9rFwxPaxcsT3NzMw8mpmZPc3MTD2sXDE9zcxMPaxcsT1Q6GEirFwxPaxcsT3NzMw8AAAAAM3MzD0AAAAArFwxPc3MTD2amZk9AAAAAM3MTD2sXLE9AAAAAKxcsT3NzEw9AAAAAKxcsT3NzEw9zczMPKxcsT2sXDE9rFwxPc3MTD2amZk9mpmZPc3MTD2sXDE9rFwxPc3MTD2amZk9zczMPKxcsT2sXDE9zczMPQAAAABQ6OEirFyxPQAAAADNzEw9mpmZPc3MTD2sXDE9mpmZPc3MTD2sXDE9rFyxPc3MTD1ApMMizczMPQAAAABQ6OEirFyxPQAAAADNzEw9zcxMPQAAAACsXLE9rFwxPc3MTD2amZk9rFwxPc3MTD2amZk9mpmZPc3MTD2sXDE9rFyxPQAAAADNzEw9rFwxPaxcsT3NzMw8zcxMPaxcsT1Q6GEirFyxPc3MTD1ApMMirFyxPc3MTD1ApMMimpmZPc3MTD2sXDE9rFwxPaxcsT3NzMw8PiY3IJEutL8NJmM4tVC0v0ZDNSQGUXG+DSZjOLVQtL+ZLldQy36av4dL9zCzfeu9h0v3MLN9671GQzUkBlFxvg0mYzi1ULS/DSZjOLVQtL8+JjcgkS60vwAAJdHZLv+/AAAl0dku/78AACVRJVH/vw0mYzi1ULS/mS5XUMt+mr8NJmM4tVC0vwAAJVElUf+/AAAlUSVR/78AAP9//3//v5kuV1DLfpq/ZdEOAckAAL8+JjcgkS60v39EcxORL22+f0RzE5Evbb53tIEDJgTFvGXRDgHJAAC/RkM1JAZRcb6HS/cws33rvf9/AADyZP+/RkM1JAZRcb5/RHMTkS9tvj4mNyCRLrS/d7SBAyYExbx/RHMTkS9tvv9/AAAMG/+/f0RzE5Evbb5GQzUkBlFxvv9/AAD/P/+//////wAA/78AACXR2S7/vz4mNyCRLrS/PiY3IJEutL9l0Q4ByQAAv/////8AAP+/mS5XUMt+mr91RsFZ+620v/NXfzttrG2+81d/O22sbb6HS/cws33rvZkuV1DLfpq/dUbBWfuttL+ZLldQy36avwAA/3//f/+/AAD/f/9//7/ZLv9/2a7/v3VGwVn7rbS/cV7xWSDQtL91RsFZ+620v9ku/3/Zrv+/2S7/f9mu/78lUf9/JdH/v3Fe8Vkg0LS/h0v3MLN9673zV387baxtvv9/AAAMm/+/fGe4POrNcb7zV387baxtvnVGwVn7rbS/81d/O22sbb58Z7g86s1xvv9/AAD/v/+/fGe4POrNcb5+fHg0mOJkxP9/AADy5P+/dUbBWfuttL9xXvFZINC0v3xnuDzqzXG+fnx4NJjiZMR8Z7g86s1xvnFe8Vkg0LS/cV7xWSDQtL/wfmZRy+vwxX58eDSY4mTE8H5mUcvr8MVxXvFZINC0vyVR/38l0f+/JVH/fyXR/7//f/9/////v/B+ZlHL6/DFAAAlUSVR/78AACXR2S7/vw0mcd7eL7S/DSZx3t4vtL8+JnXGA1K0vwAAJVElUf+/AAD/f/9//78AACVRJVH/vz4mdcYDUrS/PiZ1xgNStL+nL5iuM4GavwAA/3//f/+/py+YrjOBmr8+JnXGA1K0v39E8teRU22+f0Ty15FTbb4IT4bLS4LrvacvmK4zgZq/mS7w/v0Bmr8NJnHe3i+0vwAAJdHZLv+/AAAl0dku/7//////AAD/v5ku8P79AZq/PiZ1xgNStL8NJnHe3i+0v0ZDfOcUMnG+DSZx3t4vtL+ZLvD+/QGav4dLffxyBuu9h0t9/HIG671GQ3znFDJxvg0mcd7eL7S/RkN85xQycb5/RPLXkVNtvj4mdcYDUrS/CE+Gy0uC671/RPLXkVNtvv9////yZP+/RkN85xQycb6HS338cgbrvf9///8MG/+/f0Ty15FTbb5GQ3znFDJxvv9/////P/+/2S7/f9mu/78AAP9//3//v6cvmK4zgZq/py+YrjOBmr+bRw2mSa+0v9ku/3/Zrv+/JVH/fyXR/7/ZLv9/2a7/v5tHDaZJr7S/m0cNpkmvtL/IXz2mbdG0vyVR/38l0f+/m0cNpkmvtL+nL5iuM4GavwhPhstLguu9CE+Gy0uC673JW0bD+K5xvptHDaZJr7S/yF89pm3RtL+bRw2mSa+0v8lbRsP4rnG+/3//f////78lUf9/JdH/v8hfPaZt0bS/yF89pm3RtL8OgZiuduxcuf9//3////+/yVtGw/iucb6MbH/EbdBtvshfPaZt0bS/yVtGw/iucb4IT4bLS4Lrvf9///8Mm/+/jGx/xG3Qbb7JW0bD+K5xvv9/////v/+/gIOGy5/gd7iMbH/EbdBtvv9////y5P+/DoGYrnbsXLnIXz2mbdG0v4xsf8Rt0G2+jGx/xG3Qbb6Ag4bLn+B3uA6BmK527Fy5d7SBAyYExby4vIIYGwP1pvHZjSGUAA+o8dmNIZQAD6hl0Q4ByQAAv3e0gQMmBMW8wNmJOZUA/Zbx2Y0hlAAPqLi8ghgbA/WmuLyCGBsD9aZ3tIEDJgTFvP9/AAAAAHiyf7sMKCMDNpa4vIIYGwP1pv9/AAAAAP+f9rB4NNj7JYF/uwwoIwM2lv9/AAAAAIWNuLyCGBsD9aZ/uwwoIwM2lsDZiTmVAP2W///ZLgAAbNf/////AAD/v2XRDgHJAAC/ZdEOAckAAL/x2Y0hlAAPqP//2S4AAGzXf7sMKCMDNpb2sHg02PslgVfQZlE1/5mAV9BmUTX/mYDA2Yk5lQD9ln+7DCgjAzaW8dmNIZQAD6jA2Yk5lQD9lv//2a4AAGyX///ZrgAAbJf//9kuAABs1/HZjSGUAA+owNmJOZUA/ZZX0GZRNf+ZgP///3///wCA////f///AID//9muAABsl8DZiTmVAP2WcpN/O9v8Nqg1pLg84/x7l/9/AAD////ffnx4NO/wT7Byk3872/w2qP9/AAD//4XNNaS4POP8e5f2sHg02Pslgf9/AAD//4WNNaS4POP8e5dyk3872/w2qDagwVlp/7aocpN/O9v8Nqh+fHg07/BPsPB+ZlG68jq28H5mUbryOrY2oMFZaf+2qHKTfzvb/DaoNqDBWWn/tqjwfmZRuvI6tv9//3////+//3//f////7/Zrv9///+SqDagwVlp/7ao9rB4NNj7JYE1pLg84/x7l2O48Vlq/6SXY7jxWWr/pJdX0GZRNf+ZgPaweDTY+yWBNqDBWWn/tqhjuPFZav+klzWkuDzj/HuXV9BmUTX/mYBjuPFZav+klyXR/3///2yXJdH/f///bJf///9///8AgFfQZlE1/5mAY7jxWWr/pJc2oMFZaf+2qNmu/3///5Ko2a7/f///kqgl0f9///9sl2O48Vlq/6SXwNnH35UAtqiZLvD+/QGav/////8AAP+//////wAA/7///9kuAABs18DZx9+VALaof7uL7CMDNqiHS338cgbrvZku8P79AZq/mS7w/v0Bmr/A2cfflQC2qH+7i+wjAzaoh0t9/HIG671/u4vsIwM2qP9///8AAIXNf7uL7CMDNqi4vMnbGwN7l/9///8AAP/fuLzJ2xsDe5d/u4vsIwM2qMDZx9+VALaouLzJ2xsDe5d3tAfPJgQlgf9///8AAHjy///ZLgAAbNf//9muAABsl/HZm8eUAKSX8dmbx5QApJfA2cfflQC2qP//2S4AAGzX///ZrgAAbJf///9///8AgGXRp6/JAJmAZdGnr8kAmYDx2ZvHlACkl///2a4AAGyXwNnH35UAtqjx2ZvHlACkl7i8ydsbA3uXd7QHzyYEJYG4vMnbGwN7l/HZm8eUAKSX8dmbx5QApJdl0aevyQCZgHe0B88mBCWB2a7/f///kqj/f/9/////vw6BmK4b9BnKDoGYrhv0GcqNoQ2mav8PqNmu/3///5KoC6h/xNv8NpaCmEbD4/z1pv9///////+fgphGw+P89aaAg4bLNfeyzv9//////3iygphGw+P89aYLqH/E2/w2lom5PaZp//2Wd7QHzyYEJYELqH/E2/w2lv9//////3jyjaENpmr/D6gOgZiuG/QZyoCDhss197LOgIOGyzX3ss6CmEbD4/z1po2hDaZq/w+oibk9pmn//ZaNoQ2mav8PqIKYRsPj/PWm////f///AIAl0f9///9sl4m5PaZp//2Wibk9pmn//ZZl0aevyQCZgP///3///wCAJdH/f///bJfZrv9///+SqI2hDaZq/w+ojaENpmr/D6iJuT2maf/9liXR/3///2yXC6h/xNv8NpZ3tAfPJgQlgWXRp6/JAJmAZdGnr8kAmYCJuT2maf/9lguof8Tb/DaW")
-}]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_58jvb"]
+_data = {
+&"RESET": SubResource("Animation_gqopd")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aqrcq"]
+_data = {
+&"fall": ExtResource("2_on558"),
+&"run": ExtResource("3_gqopd"),
+&"stand": ExtResource("4_icpky"),
+&"walk": ExtResource("5_58jvb")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d2agh"]
+_data = {
+&"aim": ExtResource("3_8l73k"),
+&"aim_hip": ExtResource("8_icpky"),
+&"fire": ExtResource("8_aqrcq"),
+&"idle_waist": ExtResource("9_8l73k"),
+&"run": ExtResource("14_58jvb"),
+&"walk": ExtResource("13_8l73k")
+}
 
 [node name="Player" type="CharacterBody3D" unique_id=1964608030]
 script = SubResource("GDScript_rpf03")
@@ -336,44 +326,50 @@ bones/0/name = "mixamorig_Hips"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0023041917, 1.0357513, 0.012948491)
 bones/0/enabled = true
-bones/0/position = Vector3(0.0023041917, 1.0357513, 0.012948491)
-bones/0/rotation = Quaternion(-0.016715104, -0.34024322, -0.05056189, 0.93882835)
+bones/0/position = Vector3(0.005012691, 0.99892455, -0.0049231164)
+bones/0/rotation = Quaternion(-0.11049271, -0.34010804, -0.02908006, 0.93341976)
 bones/0/scale = Vector3(1, 1, 1)
+bones/0/skin_scale = Vector3(1, 1, 1)
 bones/1/name = "mixamorig_Spine"
 bones/1/parent = 0
 bones/1/rest = Transform3D(1, 0, 0, 0, 0.99866015, 0.05174847, 0, -0.05174847, 0.99866015, 0, 0.093014985, -0.0048198397)
 bones/1/enabled = true
 bones/1/position = Vector3(0, 0.094511, -0.004682)
-bones/1/rotation = Quaternion(0.07454322, 0.004155444, -0.015149718, 0.99709404)
+bones/1/rotation = Quaternion(0.04384106, -0.00064002775, 0.00043200367, 0.9990383)
 bones/1/scale = Vector3(1, 1, 1)
+bones/1/skin_scale = Vector3(1, 1, 1)
 bones/2/name = "mixamorig_Spine1"
 bones/2/parent = 1
 bones/2/rest = Transform3D(1, 0, 0, 0, 1, 3.202215e-08, 0, -3.202215e-08, 1, 0, 0.10866305, 0)
 bones/2/enabled = false
 bones/2/position = Vector3(0, 0.110397995, 0)
-bones/2/rotation = Quaternion(0.13790087, 0.10081416, 0.04825485, 0.9841196)
+bones/2/rotation = Quaternion(0.14274907, 0.00019261433, -0.006598731, 0.9897369)
 bones/2/scale = Vector3(1, 1, 1)
+bones/2/skin_scale = Vector3(1, 1, 1)
 bones/3/name = "mixamorig_Spine2"
 bones/3/parent = 2
 bones/3/rest = Transform3D(1, 0, 0, 0, 1, 1.3877788e-17, 0, -1.3877788e-17, 1, 0, 0.12418633, 1.3877788e-17)
 bones/3/enabled = true
 bones/3/position = Vector3(0, 0.12617, 0)
-bones/3/rotation = Quaternion(0.11977959, 0.119024456, 0.056873266, 0.9839977)
+bones/3/rotation = Quaternion(0.14275293, -0.00043129627, -0.006473464, 0.9897371)
 bones/3/scale = Vector3(1, 1, 1)
+bones/3/skin_scale = Vector3(1, 1, 1)
 bones/4/name = "mixamorig_Neck"
 bones/4/parent = 3
 bones/4/rest = Transform3D(1, 0, 0, 0, 0.99866015, -0.0517485, 0, 0.0517485, 0.99866015, 0, 0.13970959, 2.7704778e-09)
 bones/4/enabled = true
 bones/4/position = Vector3(0, 0.141941, 0)
-bones/4/rotation = Quaternion(-0.031331714, -0.038327623, 0.046029072, 0.99771273)
+bones/4/rotation = Quaternion(0.029501878, 0.06499589, 0.009187854, 0.997407)
 bones/4/scale = Vector3(1, 1, 1)
+bones/4/skin_scale = Vector3(1, 1, 1)
 bones/5/name = "mixamorig_Head"
 bones/5/parent = 4
 bones/5/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11125946, 0.023231978)
 bones/5/enabled = true
 bones/5/position = Vector3(0, 0.127659, 0.027088)
-bones/5/rotation = Quaternion(-0.078575805, 0.09272543, -0.0502491, 0.9913137)
+bones/5/rotation = Quaternion(-0.04013533, 0.19219737, 0.09014372, 0.97638285)
 bones/5/scale = Vector3(1, 1, 1)
+bones/5/skin_scale = Vector3(1, 1, 1)
 bones/6/name = "mixamorig_HeadTop_End"
 bones/6/parent = 5
 bones/6/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18255204, 0.038118515)
@@ -381,55 +377,63 @@ bones/6/enabled = false
 bones/6/position = Vector3(0, 0.18255204, 0.038118515)
 bones/6/rotation = Quaternion(0, 0, 0, 1)
 bones/6/scale = Vector3(1, 1, 1)
+bones/6/skin_scale = Vector3(1, 1, 1)
 bones/7/name = "mixamorig_LeftShoulder"
 bones/7/parent = 3
 bones/7/rest = Transform3D(-0.01357317, 0.94797564, -0.31805354, -3.758073e-05, -0.3180833, -0.9480628, -0.9999079, -0.012856215, 0.004352987, 0.054676317, 0.121262826, -0.0007467569)
 bones/7/enabled = true
 bones/7/position = Vector3(0.054676317, 0.121262826, -0.0007467569)
-bones/7/rotation = Quaternion(-0.67116946, -0.2987479, 0.43629122, -0.5195491)
+bones/7/rotation = Quaternion(-0.38456917, -0.24053653, 0.63505083, -0.6252674)
 bones/7/scale = Vector3(1, 1, 1)
+bones/7/skin_scale = Vector3(1, 1, 1)
 bones/8/name = "mixamorig_LeftArm"
 bones/8/parent = 7
 bones/8/rest = Transform3D(0.99926734, 0.03720915, -0.00895931, -0.03827258, 0.9715021, -0.23392068, 0, 0.23409219, 0.9722144, -2.7755576e-17, 0.11533462, -4.440892e-16)
 bones/8/enabled = true
 bones/8/position = Vector3(-2.7755576e-17, 0.11533462, -4.440892e-16)
-bones/8/rotation = Quaternion(0.3379626, -0.33951446, 0.37404296, 0.7941053)
+bones/8/rotation = Quaternion(0.38466364, -0.25280532, 0.23578563, 0.8558788)
 bones/8/scale = Vector3(1, 1, 1)
+bones/8/skin_scale = Vector3(1, 1, 1)
 bones/9/name = "mixamorig_LeftForeArm"
 bones/9/parent = 8
 bones/9/rest = Transform3D(0.99969786, -0.024579, -5.5858625e-05, 0.024579063, 0.9996953, 0.0022719237, 0, -0.00227261, 0.99999744, 2.7755576e-17, 0.30136234, -2.220446e-16)
 bones/9/enabled = true
 bones/9/position = Vector3(2.7755576e-17, 0.30136234, -2.220446e-16)
-bones/9/rotation = Quaternion(0.06051101, 0.07901301, 0.36630803, 0.9251561)
+bones/9/rotation = Quaternion(0.1347949, -0.04163399, 0.4035928, 0.90399665)
 bones/9/scale = Vector3(1, 1, 1)
+bones/9/skin_scale = Vector3(1, 1, 1)
 bones/10/name = "mixamorig_LeftHand"
 bones/10/parent = 9
 bones/10/rest = Transform3D(0.9283014, -0.05538001, 0.36768132, 0.059269845, 0.9982417, 0.0007135486, -0.36707437, 0.021130025, 0.92995155, -2.7755576e-17, 0.25635016, 0)
 bones/10/enabled = true
 bones/10/position = Vector3(0, 0.25635016, 0)
-bones/10/rotation = Quaternion(-0.060157128, -0.040891007, -0.049337402, 0.99613)
+bones/10/rotation = Quaternion(-0.05951571, -0.67184883, -0.28711206, 0.6801792)
 bones/10/scale = Vector3(0.99999994, 1, 0.99999994)
+bones/10/skin_scale = Vector3(1, 1, 1)
 bones/11/name = "mixamorig_LeftHandThumb1"
 bones/11/parent = 10
 bones/11/rest = Transform3D(0.89315313, -0.44975272, -5.385036e-07, 0.44975272, 0.89315313, 1.0694014e-06, 0, -1.1973327e-06, 1, -0.019615635, 0.042205572, 1.0394005e-08)
 bones/11/enabled = true
 bones/11/position = Vector3(-0.019615635, 0.042205572, 1.0394004e-08)
-bones/11/rotation = Quaternion(0.18756604, 0.008276466, 0.2507921, 0.94965994)
+bones/11/rotation = Quaternion(0.15462941, 0.058033474, 0.2293725, 0.9592238)
 bones/11/scale = Vector3(1, 1, 1)
+bones/11/skin_scale = Vector3(1, 1, 1)
 bones/12/name = "mixamorig_LeftHandThumb2"
 bones/12/parent = 11
 bones/12/rest = Transform3D(1, 3.2356142e-17, 2.3155007e-17, -2.3155007e-17, 0.9465212, -0.32264158, -3.2356142e-17, 0.32264158, 0.9465212, 0.0011698593, 0.037214577, 2.220446e-16)
 bones/12/enabled = true
 bones/12/position = Vector3(0.0011698593, 0.037214577, 0)
-bones/12/rotation = Quaternion(0.04176963, -0.00273088, -0.16856578, 0.98480123)
+bones/12/rotation = Quaternion(0.03884677, 0.16639735, -0.10140857, 0.9800608)
 bones/12/scale = Vector3(1, 1, 1)
+bones/12/skin_scale = Vector3(1, 1, 1)
 bones/13/name = "mixamorig_LeftHandThumb3"
 bones/13/parent = 12
 bones/13/rest = Transform3D(1, 8.4150473e-17, 1.103595e-16, -8.2382994e-17, 0.9998733, -0.015918983, -1.116851e-16, 0.015918983, 0.9998733, -0.0026784344, 0.03524497, -2.220446e-16)
 bones/13/enabled = true
 bones/13/position = Vector3(-0.0026784344, 0.03524497, -1.4210854e-16)
-bones/13/rotation = Quaternion(-0.18657857, -0.07685509, 0.21796215, 0.9548688)
+bones/13/rotation = Quaternion(-0.054825053, 0.012115409, 0.13493201, 0.98926276)
 bones/13/scale = Vector3(1, 1, 1)
+bones/13/skin_scale = Vector3(1, 1, 1)
 bones/14/name = "mixamorig_LeftHandThumb4"
 bones/14/parent = 13
 bones/14/rest = Transform3D(1, 1.6653345e-16, -5.551115e-17, -1.6653345e-16, 1, 2.7755576e-17, 5.551115e-17, -2.7755576e-17, 1, 0.001508575, 0.034086555, -1.4210854e-16)
@@ -437,27 +441,31 @@ bones/14/enabled = true
 bones/14/position = Vector3(0.001508575, 0.034086555, -1.4210854e-16)
 bones/14/rotation = Quaternion(-1.3877788e-17, -2.7755576e-17, -8.326673e-17, 1)
 bones/14/scale = Vector3(1, 1, 1)
+bones/14/skin_scale = Vector3(1, 1, 1)
 bones/15/name = "mixamorig_LeftHandIndex1"
 bones/15/parent = 10
 bones/15/rest = Transform3D(0.9994538, 0.03303052, -0.001071396, -0.033047896, 0.9989284, -0.032401793, -5.820766e-11, 0.032419503, 0.99947435, 5.551115e-17, 0.0782745, 2.0819193e-08)
 bones/15/enabled = true
 bones/15/position = Vector3(7.105427e-17, 0.0782745, 2.0819192e-08)
-bones/15/rotation = Quaternion(0.17525874, 0.078431785, 0.08105277, 0.97804064)
+bones/15/rotation = Quaternion(0.3088895, -0.021376356, 0.09526484, 0.9460735)
 bones/15/scale = Vector3(1, 1, 1)
+bones/15/skin_scale = Vector3(1, 1, 1)
 bones/16/name = "mixamorig_LeftHandIndex2"
 bones/16/parent = 15
 bones/16/rest = Transform3D(1, -1.215329e-16, 1.2891279e-18, 1.0745061e-16, 0.8790715, -0.47669002, 5.680028e-17, 0.47669002, 0.8790715, 0.002957673, 0.05080635, 0)
 bones/16/enabled = true
 bones/16/position = Vector3(0.002957673, 0.05080635, 0)
-bones/16/rotation = Quaternion(0.24156494, -9.578701e-05, -0.02353707, 0.9700992)
+bones/16/rotation = Quaternion(0.49104095, 0.005188069, 0.037502486, 0.8703135)
 bones/16/scale = Vector3(1, 1, 1)
+bones/16/skin_scale = Vector3(1, 1, 1)
 bones/17/name = "mixamorig_LeftHandIndex3"
 bones/17/parent = 16
 bones/17/rest = Transform3D(1, 9.163892e-17, -6.7699055e-17, -5.667994e-17, 0.9155857, 0.40212288, 9.88344e-17, -0.40212288, 0.9155857, -0.004367704, 0.045152355, 4.440892e-16)
 bones/17/enabled = true
 bones/17/position = Vector3(-0.004367704, 0.045152355, 0)
-bones/17/rotation = Quaternion(0.2418506, 0.014361845, 0.11414104, 0.9634697)
+bones/17/rotation = Quaternion(0.20513901, 0.013238406, 0.10682784, 0.97279525)
 bones/17/scale = Vector3(1, 1, 1)
+bones/17/skin_scale = Vector3(1, 1, 1)
 bones/18/name = "mixamorig_LeftHandIndex4"
 bones/18/parent = 17
 bones/18/rest = Transform3D(1, 1.0408341e-17, -1.6653345e-16, -1.0408341e-17, 1, 4.922278e-16, 1.6653345e-16, -4.922278e-16, 1, 0.0014100311, 0.044035103, 1.4210854e-16)
@@ -465,55 +473,63 @@ bones/18/enabled = true
 bones/18/position = Vector3(0.0014100311, 0.044035103, 1.4210854e-16)
 bones/18/rotation = Quaternion(-2.461139e-16, -8.326673e-17, -5.2041704e-18, 1)
 bones/18/scale = Vector3(1, 1, 1)
+bones/18/skin_scale = Vector3(1, 1, 1)
 bones/19/name = "mixamorig_RightShoulder"
 bones/19/parent = 3
 bones/19/rest = Transform3D(-0.021199346, -0.9479757, 0.31763613, 3.707409e-05, -0.31770825, -0.94818854, 0.9997753, -0.02008915, 0.0067703724, -0.054676317, 0.12128444, -0.0011638637)
 bones/19/enabled = true
 bones/19/position = Vector3(-0.054676317, 0.12128444, -0.0011638637)
-bones/19/rotation = Quaternion(0.5097827, -0.47425523, 0.58391505, 0.41742906)
+bones/19/rotation = Quaternion(0.27604362, -0.30220577, 0.69729483, 0.58843136)
 bones/19/scale = Vector3(1, 1, 1)
+bones/19/skin_scale = Vector3(1, 1, 1)
 bones/20/name = "mixamorig_RightArm"
 bones/20/parent = 19
 bones/20/rest = Transform3D(0.99974805, -0.021817204, 0.00527307, 0.022445392, 0.97176766, -0.23486969, 0, 0.23492888, 0.9720126, 1.3877788e-17, 0.11533462, -2.220446e-16)
 bones/20/enabled = true
 bones/20/position = Vector3(1.3877788e-17, 0.11533462, -2.220446e-16)
-bones/20/rotation = Quaternion(0.2908612, -0.09860796, -0.35154882, 0.8843584)
+bones/20/rotation = Quaternion(0.45297018, -0.18042405, -0.5116092, 0.70747536)
 bones/20/scale = Vector3(0.99999994, 1, 1)
+bones/20/skin_scale = Vector3(1, 1, 1)
 bones/21/name = "mixamorig_RightForeArm"
 bones/21/parent = 20
 bones/21/rest = Transform3D(0.99982196, 0.018868774, 4.923727e-05, -0.018868838, 0.99981856, 0.0026089842, -1.8189894e-12, -0.002609449, 0.9999966, 6.938894e-18, 0.3013174, 2.220446e-16)
 bones/21/enabled = true
 bones/21/position = Vector3(6.938894e-18, 0.3013174, 2.220446e-16)
-bones/21/rotation = Quaternion(0.1393996, 0.20306733, -0.84597015, 0.4729335)
+bones/21/rotation = Quaternion(0.045727767, 7.964786e-06, -0.7558581, 0.6531367)
 bones/21/scale = Vector3(1, 1, 1)
+bones/21/skin_scale = Vector3(1, 1, 1)
 bones/22/name = "mixamorig_RightHand"
 bones/22/parent = 21
 bones/22/rest = Transform3D(0.88985455, -0.015779072, -0.45597142, 0.015675088, 0.9998691, -0.0040100273, 0.455975, -0.0035790508, 0.8899854, -2.7755576e-17, 0.2563542, 2.220446e-16)
 bones/22/enabled = true
 bones/22/position = Vector3(0, 0.256, 0)
-bones/22/rotation = Quaternion(-0.08409662, -0.27851847, 0.0205786, 0.9565206)
+bones/22/rotation = Quaternion(-0.11546214, 0.17287377, 0.26469207, 0.9416588)
 bones/22/scale = Vector3(1, 1, 1)
+bones/22/skin_scale = Vector3(1, 1, 1)
 bones/23/name = "mixamorig_RightHandThumb1"
 bones/23/parent = 22
 bones/23/rest = Transform3D(0.8565817, 0.5160114, -4.9592757e-08, -0.5160114, 0.8565817, -8.232424e-08, -1.7763568e-15, 9.610786e-08, 1, 0.02261901, 0.04128212, 7.4318085e-10)
 bones/23/enabled = true
 bones/23/position = Vector3(0.02261901, 0.04128212, 7.4318124e-10)
-bones/23/rotation = Quaternion(0.12316782, -0.14683254, -0.27182907, 0.9430689)
+bones/23/rotation = Quaternion(0.23323447, -0.054319732, -0.32026213, 0.91656053)
 bones/23/scale = Vector3(0.99999994, 0.99999994, 1)
+bones/23/skin_scale = Vector3(1, 1, 1)
 bones/24/name = "mixamorig_RightHandThumb2"
 bones/24/parent = 23
 bones/24/rest = Transform3D(1, -2.1763438e-17, 5.850722e-17, 3.3747715e-17, 0.9769643, -0.21340293, -5.2515083e-17, 0.21340293, 0.9769643, -0.0015415906, 0.037626512, 2.220446e-16)
 bones/24/enabled = true
 bones/24/position = Vector3(-0.0015415906, 0.037626512, 0)
-bones/24/rotation = Quaternion(0.068791956, 0.014491843, 0.22389884, 0.97207355)
+bones/24/rotation = Quaternion(0.025892112, -0.1875434, 0.2801339, 0.9411069)
 bones/24/scale = Vector3(1, 1, 1)
+bones/24/skin_scale = Vector3(1, 1, 1)
 bones/25/name = "mixamorig_RightHandThumb3"
 bones/25/parent = 24
 bones/25/rest = Transform3D(1, -2.3253973e-17, -8.170404e-17, 4.5016037e-18, 0.9749581, -0.2223886, 8.482943e-17, 0.2223886, 0.9749581, 0.0017311041, 0.03489124, 2.220446e-16)
 bones/25/enabled = true
 bones/25/position = Vector3(0.0017311041, 0.03489124, 0)
-bones/25/rotation = Quaternion(-0.04250481, 0.028130298, 0.2336339, 0.97098774)
+bones/25/rotation = Quaternion(0.0039332286, -0.016196813, 0.46587145, 0.8846954)
 bones/25/scale = Vector3(1, 1, 1)
+bones/25/skin_scale = Vector3(1, 1, 1)
 bones/26/name = "mixamorig_RightHandThumb4"
 bones/26/parent = 25
 bones/26/rest = Transform3D(1, -1.3866696e-32, 5.551115e-17, 0, 1, 2.4980018e-16, -5.551115e-17, -2.4980018e-16, 1, -0.00018951355, 0.031517617, 1.4210854e-16)
@@ -521,27 +537,31 @@ bones/26/enabled = true
 bones/26/position = Vector3(-0.00018951355, 0.031517617, 1.4210854e-16)
 bones/26/rotation = Quaternion(-1.2490009e-16, 2.7755576e-17, 3.466674e-33, 1)
 bones/26/scale = Vector3(1, 1, 1)
+bones/26/skin_scale = Vector3(1, 1, 1)
 bones/27/name = "mixamorig_RightHandIndex1"
 bones/27/parent = 22
 bones/27/rest = Transform3D(0.99816453, 0.060189396, -0.006690759, -0.06056013, 0.992054, -0.11027847, 2.3283064e-10, 0.11048126, 0.9938782, 0, 0.08600229, 8.9789065e-10)
 bones/27/enabled = true
 bones/27/position = Vector3(0, 0.08600229, 8.978911e-10)
-bones/27/rotation = Quaternion(0.061761443, -0.0023549835, 0.007249233, 0.9980619)
+bones/27/rotation = Quaternion(0.09259984, 0.005520612, -0.078977935, 0.9925509)
 bones/27/scale = Vector3(1, 1, 1)
+bones/27/skin_scale = Vector3(1, 1, 1)
 bones/28/name = "mixamorig_RightHandIndex2"
 bones/28/parent = 27
 bones/28/rest = Transform3D(1, 3.4691677e-17, -6.3433364e-17, -5.442974e-17, 0.938722, -0.34467512, 4.7588938e-17, 0.34467512, 0.938722, -0.0021117611, 0.049638007, 8.881784e-16)
 bones/28/enabled = true
 bones/28/position = Vector3(-0.0021117611, 0.049638007, 2.842171e-16)
-bones/28/rotation = Quaternion(0.09551298, 0.0027659282, 0.043108344, 0.99449044)
+bones/28/rotation = Quaternion(0.2684761, -0.0032948635, -0.019030636, 0.9630927)
 bones/28/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/28/skin_scale = Vector3(1, 1, 1)
 bones/29/name = "mixamorig_RightHandIndex3"
 bones/29/parent = 28
 bones/29/rest = Transform3D(1, 2.4700164e-17, -2.3893059e-17, -1.34637525e-17, 0.92127997, 0.38890007, 3.1618092e-17, -0.38890007, 0.92127997, 0.004666803, 0.042227004, 0)
 bones/29/enabled = true
 bones/29/position = Vector3(0.004666803, 0.042227004, 0)
-bones/29/rotation = Quaternion(0.27358735, -0.011259481, -0.175771, 0.94558334)
+bones/29/rotation = Quaternion(0.24344204, -0.010578707, -0.16624866, 0.95550275)
 bones/29/scale = Vector3(1, 1, 1)
+bones/29/skin_scale = Vector3(1, 1, 1)
 bones/30/name = "mixamorig_RightHandIndex4"
 bones/30/parent = 29
 bones/30/rest = Transform3D(1, 6.938894e-18, -2.220446e-16, -6.938894e-18, 1, 6.2450045e-17, 2.220446e-16, -6.2450045e-17, 1, -0.0025550416, 0.041174855, 1.4210854e-16)
@@ -549,34 +569,39 @@ bones/30/enabled = true
 bones/30/position = Vector3(-0.0025550416, 0.041174855, 1.4210854e-16)
 bones/30/rotation = Quaternion(-3.1225023e-17, -1.110223e-16, -3.469447e-18, 1)
 bones/30/scale = Vector3(1, 1, 1)
+bones/30/skin_scale = Vector3(1, 1, 1)
 bones/31/name = "mixamorig_LeftUpLeg"
 bones/31/parent = 0
 bones/31/rest = Transform3D(-0.996449, 0.08419823, 0, -0.084193565, -0.9963938, -0.0105252275, -0.0008862056, -0.010487854, 0.9999446, 0.08709181, -0.051617127, 0.0029876435)
 bones/31/enabled = true
 bones/31/position = Vector3(0.08709181, -0.051617127, 0.0029876435)
-bones/31/rotation = Quaternion(0.23193589, 0.24136543, 0.9290988, -0.15723844)
+bones/31/rotation = Quaternion(0.3967263, 0.061296377, 0.9048752, -0.14160417)
 bones/31/scale = Vector3(0.99999994, 0.99999994, 1)
+bones/31/skin_scale = Vector3(1, 1, 1)
 bones/32/name = "mixamorig_LeftLeg"
 bones/32/parent = 31
 bones/32/rest = Transform3D(0.99999875, -0.0015931823, -2.7119973e-05, 0.0015934131, 0.99985385, 0.01702003, -1.8189894e-12, -0.017020052, 0.99985516, -2.7755576e-17, 0.46607006, -1.7347235e-18)
 bones/32/enabled = true
 bones/32/position = Vector3(-2.7755576e-17, 0.46607006, -1.7347235e-18)
-bones/32/rotation = Quaternion(-0.69115, 0.009385628, -0.029763235, 0.7220374)
+bones/32/rotation = Quaternion(-0.19697142, -0.00702461, -0.0037362338, 0.98037696)
 bones/32/scale = Vector3(1, 0.99999994, 1)
+bones/32/skin_scale = Vector3(1, 1, 1)
 bones/33/name = "mixamorig_LeftFoot"
 bones/33/parent = 32
 bones/33/rest = Transform3D(0.99991924, -0.010599364, -0.0070137177, 0, 0.5518359, -0.83395267, 0.012709789, 0.8338853, 0.5517913, -3.8857806e-16, 0.43804333, 7.806256e-18)
 bones/33/enabled = true
 bones/33/position = Vector3(-3.8857806e-16, 0.43804333, 7.806256e-18)
-bones/33/rotation = Quaternion(0.59432316, 0.006794985, 0.024348738, 0.803829)
+bones/33/rotation = Quaternion(0.45889604, -0.004576508, 0.028846594, 0.8880098)
 bones/33/scale = Vector3(1, 0.99999994, 0.99999994)
+bones/33/skin_scale = Vector3(1, 1, 1)
 bones/34/name = "mixamorig_LeftToeBase"
 bones/34/parent = 33
 bones/34/rest = Transform3D(0.9936947, -0.06460664, -0.091634266, 0, 0.8172887, -0.57622844, 0.11211983, 0.5725952, 0.8121354, 0, 0.14257549, -1.3877788e-17)
 bones/34/enabled = true
 bones/34/position = Vector3(0, 0.14257549, -1.3877788e-17)
-bones/34/rotation = Quaternion(0.2871343, -0.057169456, 0.0165201, 0.9560401)
+bones/34/rotation = Quaternion(0.30345312, -0.053680655, 0.016995711, 0.9511813)
 bones/34/scale = Vector3(1, 1, 0.99999994)
+bones/34/skin_scale = Vector3(1, 1, 1)
 bones/35/name = "mixamorig_LeftToe_End"
 bones/35/parent = 34
 bones/35/rest = Transform3D(1, 4.7736402e-32, 1.576972e-16, 0, 1, -3.0270925e-16, -1.576972e-16, 3.0270925e-16, 1, 0, 0.060654312, 0)
@@ -584,34 +609,39 @@ bones/35/enabled = true
 bones/35/position = Vector3(0, 0.060654312, 0)
 bones/35/rotation = Quaternion(1.5135462e-16, 7.88486e-17, -1.19341006e-32, 1)
 bones/35/scale = Vector3(1, 1, 1)
+bones/35/skin_scale = Vector3(1, 1, 1)
 bones/36/name = "mixamorig_RightUpLeg"
 bones/36/parent = 0
 bones/36/rest = Transform3D(-0.9964495, -0.08419365, -5.820766e-11, 0.08418438, -0.9963398, -0.014841399, 0.0012495515, -0.014788703, 0.99988985, -0.08709181, -0.051617127, 0.0031466545)
 bones/36/enabled = true
 bones/36/position = Vector3(-0.08709181, -0.051617127, 0.0031466545)
-bones/36/rotation = Quaternion(-0.014027667, 0.25731272, 0.9614695, -0.09576009)
+bones/36/rotation = Quaternion(0.045808088, -0.047858596, 0.9967621, 0.045570638)
 bones/36/scale = Vector3(1, 1.0000001, 0.99999994)
+bones/36/skin_scale = Vector3(1, 1, 1)
 bones/37/name = "mixamorig_RightLeg"
 bones/37/parent = 36
 bones/37/rest = Transform3D(0.99999875, 0.001599157, 1.1867386e-05, -0.001599201, 0.9999712, 0.0074208123, 0, -0.0074208216, 0.99997246, 2.7755576e-17, 0.4660954, -6.505213e-19)
 bones/37/enabled = true
 bones/37/position = Vector3(2.7755576e-17, 0.4660954, -6.505213e-19)
-bones/37/rotation = Quaternion(-0.50701934, -0.040173735, -0.0132700605, 0.8608957)
+bones/37/rotation = Quaternion(-0.27544597, 0.0041227452, 0.0084433695, 0.9612707)
 bones/37/scale = Vector3(1, 1, 1)
+bones/37/skin_scale = Vector3(1, 1, 1)
 bones/38/name = "mixamorig_RightFoot"
 bones/38/parent = 37
 bones/38/rest = Transform3D(0.999914, 0.010901999, 0.0072939275, 0, 0.55606794, -0.8311369, -0.013116972, 0.83106536, 0.5560201, 0, 0.43798608, 2.1684043e-18)
 bones/38/enabled = true
 bones/38/position = Vector3(0, 0.43798608, 2.1684043e-18)
-bones/38/rotation = Quaternion(0.6524871, -0.041164037, -0.07295976, 0.75315547)
+bones/38/rotation = Quaternion(0.62177795, 0.15068857, -0.04948163, 0.7669659)
 bones/38/scale = Vector3(1, 1, 1)
+bones/38/skin_scale = Vector3(1, 1, 1)
 bones/39/name = "mixamorig_RightToeBase"
 bones/39/parent = 38
 bones/39/rest = Transform3D(0.9937534, 0.06428769, 0.09122116, 3.7252903e-09, 0.81740546, -0.5760628, -0.111598425, 0.57246435, 0.81229943, 0, 0.14261241, -3.469447e-17)
 bones/39/enabled = true
 bones/39/position = Vector3(0, 0.14261241, -3.469447e-17)
-bones/39/rotation = Quaternion(0.310848, 0.05955239, -0.0069356337, 0.94856685)
+bones/39/rotation = Quaternion(0.30185223, 0.053284295, -0.016891023, 0.95171463)
 bones/39/scale = Vector3(1, 1, 1)
+bones/39/skin_scale = Vector3(1, 1, 1)
 bones/40/name = "mixamorig_RightToe_End"
 bones/40/parent = 39
 bones/40/rest = Transform3D(1, 1.3877788e-17, 1.64094e-16, -1.3877788e-17, 1, -2.5326963e-16, -1.64094e-16, 2.5326963e-16, 1, -3.5527136e-17, 0.06087779, 0)
@@ -619,6 +649,7 @@ bones/40/enabled = true
 bones/40/position = Vector3(-3.5527136e-17, 0.06087779, 0)
 bones/40/rotation = Quaternion(1.2663481e-16, 8.2047e-17, -6.938894e-18, 1)
 bones/40/scale = Vector3(1, 1, 1)
+bones/40/skin_scale = Vector3(1, 1, 1)
 
 [node name="HumanoidBase_NotOverlapping" type="MeshInstance3D" parent="Humanoid/Skeleton3D" unique_id=449464128]
 mesh = SubResource("ArrayMesh_f0tp5")
@@ -627,7 +658,6 @@ skeleton = NodePath("..")
 surface_material_override/0 = SubResource("StandardMaterial3D_icpky")
 
 [node name="CameraBA" type="BoneAttachment3D" parent="Humanoid/Skeleton3D" unique_id=552102085]
-transform = Transform3D(0.9280356, -0.08349391, -0.36301336, 0.04880041, 0.99340755, -0.103728995, 0.36928087, 0.07854892, 0.92599225, -0.077258565, 1.7878375, 0.17365038)
 bone_name = "mixamorig_HeadTop_End"
 bone_idx = 6
 
@@ -656,9 +686,10 @@ settings/0/joints/5/limitation = null
 
 [node name="RHandBA" type="BoneAttachment3D" parent="Humanoid/Skeleton3D" unique_id=206597408]
 unique_name_in_owner = true
-transform = Transform3D(0.5280232, 0.009586051, 0.8491758, 0.75478387, 0.45299497, -0.47444335, -0.3892206, 0.89146143, 0.2319564, -0.25426525, 1.3119489, 0.20225663)
 bone_name = "mixamorig_RightHand"
 bone_idx = 22
+
+[node name="AK47" parent="Humanoid/Skeleton3D/RHandBA" unique_id=701440955 instance=ExtResource("2_gqopd")]
 
 [node name="RHandIK" type="FABRIK3D" parent="Humanoid/Skeleton3D" unique_id=832364881]
 unique_name_in_owner = true
@@ -683,23 +714,6 @@ settings/0/joints/4/rotation_axis = 3
 settings/0/joints/4/limitation = null
 settings/0/joints/5/rotation_axis = 3
 settings/0/joints/5/limitation = null
-
-[node name="Animal" type="AnimationPlayer" parent="Humanoid" unique_id=237109128]
-libraries/ = SubResource("AnimationLibrary_cx3v5")
-
-[node name="AnimationTree" type="AnimationTree" parent="Humanoid" unique_id=988148269]
-unique_name_in_owner = true
-active = false
-root_node = NodePath("%AnimationTree/..")
-tree_root = SubResource("AnimationNodeStateMachine_3jg8h")
-anim_player = NodePath("../Animal")
-parameters/RifleArmed/BlendSpace2D/blend_position = Vector2(0, 0)
-parameters/RifleArmed/Blend2/blend_amount = 0.0
-parameters/RifleArmed/OneShot/active = false
-parameters/RifleArmed/OneShot/internal_active = false
-parameters/RifleArmed/OneShot/request = 0
-parameters/RifleArmed/TimeScale/scale = 4.0
-parameters/Unarmed/BlendSpace2D/blend_position = Vector2(0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1239281789]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09031576, 0)
@@ -749,3 +763,26 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("17_aqrcq")
 expand_mode = 2
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=988148269]
+unique_name_in_owner = true
+active = false
+root_node = NodePath("%AnimationTree/../Humanoid")
+tree_root = SubResource("AnimationNodeStateMachine_3jg8h")
+anim_player = NodePath("../Animator")
+parameters/RifleArmed/BlendSpace2D/blend_position = Vector2(0, 0)
+parameters/RifleArmed/BlendSpace2D/observer = null
+parameters/RifleArmed/Blend2/blend_amount = 0.0
+parameters/RifleArmed/OneShot/active = false
+parameters/RifleArmed/OneShot/internal_active = false
+parameters/RifleArmed/OneShot/request = 0
+parameters/RifleArmed/OneShot/observer = null
+parameters/RifleArmed/TimeScale/scale = 4.0
+parameters/Unarmed/BlendSpace2D/blend_position = Vector2(0, 0)
+parameters/Unarmed/BlendSpace2D/observer = null
+
+[node name="Animator" type="AnimationPlayer" parent="." unique_id=324781687]
+root_node = NodePath("../Humanoid")
+libraries/ = SubResource("AnimationLibrary_58jvb")
+libraries/basic = SubResource("AnimationLibrary_aqrcq")
+libraries/rifle = SubResource("AnimationLibrary_d2agh")

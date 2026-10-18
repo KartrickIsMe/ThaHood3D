@@ -11,7 +11,7 @@ data = PackedVector3Array(0.8944, -0.59029996, -0.0219, 0.1722, -0.1653, -0.0219
 
 [node name="Rock Type6 01" unique_id=1025006041 instance=ExtResource("1_j3dnv")]
 
-[node name="Rock_Type6_01_mesh" parent="." index="0" unique_id=1134668072]
+[node name="Rock_Type6_01_mesh" parent="." index="0" unique_id=623179028]
 material_override = SubResource("StandardMaterial3D_c4w5t")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Rock_Type6_01_mesh" index="0" unique_id=1561608058]

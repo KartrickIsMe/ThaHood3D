@@ -11,7 +11,7 @@ data = PackedVector3Array(-0.0889, 0.50409997, -0.4547, -0.3757, 0.4525, -0.4547
 
 [node name="Tree Type2 02" unique_id=272936041 instance=ExtResource("1_w0hkc")]
 
-[node name="Tree_Type2_02_mesh" parent="." index="0" unique_id=1599711016]
+[node name="Tree_Type2_02_mesh" parent="." index="0" unique_id=2117680683]
 material_override = SubResource("StandardMaterial3D_6g4n4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tree_Type2_02_mesh" index="0" unique_id=1831212174]
