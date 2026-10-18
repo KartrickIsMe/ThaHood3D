@@ -6,7 +6,7 @@ extends "res://characters/player/player.gd"
 @onready var crosshair: TextureRect = %Crosshair
 @export var pistol_scene: PackedScene = preload("res://characters/player/equipables/pistol_coonan.tscn")
 @export var axe_scene: PackedScene = preload("res://characters/player/equipables/axe.tscn")
-@export var ak47_scene: PackedScene = preload("res://characters/player/equipables/ak_47.tscn")
+@export var ak47_scene: PackedScene = preload("res://characters/player/equipables/rifles/ak_47/ak_47.tscn")
 
 
 var pistol_node: Node3D = pistol_scene.instantiate()
@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 		set_crosshair_visibility(true)
 		if Input.is_action_pressed("attack"):
 			if gun_name == "ak47":
-				ak47_node.attack_fire(true, animation_tree, camera, camera_min_angle_degrees,  camera_max_angle_degrees, delta)
+				ak47_node.attack_fire(true, animation_tree, camera, camera_min_angle_degrees,  camera_max_angle_degrees, delta, player)
 	else:
 		set_crosshair_visibility(false)
 	

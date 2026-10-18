@@ -10,6 +10,7 @@ extends CharacterBody3D
 @export var air_control: float = 0.02
 @onready var animation_tree: AnimationTree = %AnimationTree
 @onready var actual_camera: Camera3D = %Camera3D
+@onready var player: Node3D = $"."
 var camera_max_angle_degrees: float = camera_constraints_degrees
 var camera_min_angle_degrees: float = -camera_constraints_degrees + 14
 var smooth_value_y: float

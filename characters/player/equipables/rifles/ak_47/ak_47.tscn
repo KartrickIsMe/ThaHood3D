@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://rpos82sau8kn"]
 
-[ext_resource type="Script" uid="uid://b2oth1yordgwl" path="res://characters/player/equipables/ak_47.gd" id="1_ah0g6"]
+[ext_resource type="Script" uid="uid://b2oth1yordgwl" path="res://characters/player/equipables/rifles/ak_47/ak_47.gd" id="1_ah0g6"]
 [ext_resource type="Texture2D" uid="uid://02x3wy7kv5vw" path="res://models/guns/AK47(1).png" id="2_emjyu"]
 [ext_resource type="Texture2D" uid="uid://bcgx4a3bro1xs" path="res://models/guns/AK47(2).png" id="3_w3akq"]
 [ext_resource type="Texture2D" uid="uid://bpocyb17n4dfl" path="res://textures/—Pngtree—front gun shots muzzle flash_8749538.png" id="4_emjyu"]

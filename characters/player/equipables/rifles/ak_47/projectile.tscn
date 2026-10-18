@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bgeaddpwamdtd"]
+
+[ext_resource type="Script" uid="uid://dnhqxveql8wp7" path="res://characters/player/equipables/rifles/ak_47/projectile.gd" id="1_efjg8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_efjg8"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_efjg8"]
+radius = 0.2
+
+[node name="Projectile" type="RigidBody3D" unique_id=1803157958]
+mass = 0.079
+physics_material_override = SubResource("PhysicsMaterial_efjg8")
+continuous_cd = true
+script = ExtResource("1_efjg8")
+
+[node name="Trail3D" type="Trail3D" parent="." unique_id=843864689]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+custom_aabb = AABB(-0.1, -0.1, -0.1, 0.2, 0.2, 0.2)
+lifetime = 0.1
+width = 0.1
+color = Color(1, 1, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1557657412]
+shape = SubResource("SphereShape3D_efjg8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
