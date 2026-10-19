@@ -20,6 +20,9 @@ var speed: float
 
 #VELOCITY BASED ANIMATION HANDLED IN player_guns.gd
 
+func _enter_tree() -> void:
+	set_multiplayer_authority(name.to_int())
+
 func _ready() -> void:
 	actual_camera.global_rotation_degrees.z = 0
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -38,7 +41,7 @@ func _process(_delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	
+	if not is_multiplayer_authority(): return
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	

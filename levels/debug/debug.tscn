@@ -1,19 +1,8 @@
 [gd_scene format=4 uid="uid://d0sfmv7cbvf4r"]
 
-[ext_resource type="Texture2D" uid="uid://csfid88ermwoc" path="res://textures/kloofendal_48d_partly_cloudy_puresky_4k.hdr" id="1_6wbpm"]
 [ext_resource type="PackedScene" uid="uid://bbfmya0b1i86d" path="res://characters/player/player.tscn" id="1_m43av"]
 [ext_resource type="Texture2D" uid="uid://cderfa8cdc247" path="res://levels/debug/prototype_textures/texture_10.png" id="1_nyhfw"]
 [ext_resource type="Texture2D" uid="uid://by66dkodq7prm" path="res://levels/debug/prototype_textures/texture_01.png" id="3_e5avq"]
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t76ll"]
-panorama = ExtResource("1_6wbpm")
-
-[sub_resource type="Sky" id="Sky_6wbpm"]
-sky_material = SubResource("PanoramaSkyMaterial_t76ll")
-
-[sub_resource type="Environment" id="Environment_6ls5g"]
-background_mode = 2
-sky = SubResource("Sky_6wbpm")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3jg8h"]
 size = Vector2(20, 20)
@@ -62,10 +51,10 @@ data = PackedVector3Array(-7.9062, 0.562, -7.4912, -7.9062, 0, -7.4912, -2.3906,
 [node name="Debug" type="Node3D" unique_id=691948954]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=164177309]
-environment = SubResource("Environment_6ls5g")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=490407075]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_energy = 0.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=599311734]
 mesh = SubResource("PlaneMesh_3jg8h")

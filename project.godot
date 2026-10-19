@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="ThaHood3D"
-run/main_scene="uid://d0sfmv7cbvf4r"
+run/main_scene="uid://ba01ixnwmh018"
 config/features=PackedStringArray("4.8", "GL Compatibility")
+
+[autoload]
+
+MainNetwork="*uid://b0jywbr17oejo"
 
 [debug]
 
@@ -46,7 +50,7 @@ folder_colors={
 "res://docs/": "gray",
 "res://levels/": "orange",
 "res://models/": "yellow",
-"res://sound_fx/": "pink",
+"res://sounds/": "pink",
 "res://textures/": "green",
 "res://trash/": "gray"
 }
