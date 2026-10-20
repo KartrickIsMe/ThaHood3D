@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://ba01ixnwmh018"]
 
-[ext_resource type="Script" uid="uid://b0jywbr17oejo" path="res://levels/main/main_network.gd" id="1_0o3xy"]
+[ext_resource type="Script" uid="uid://bwebjy88hx7l5" path="res://levels/main/main.gd" id="1_f6gjy"]
 [ext_resource type="PackedScene" uid="uid://lumjqti55ksk" path="res://levels/main/ui/control.tscn" id="2_vc640"]
 [ext_resource type="Script" uid="uid://b55ma4omnffkk" path="res://levels/main/multiplayer_spawner.gd" id="3_f6gjy"]
 
 [node name="Main" type="Node" unique_id=1956557121]
-script = ExtResource("1_0o3xy")
+script = ExtResource("1_f6gjy")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1055159717]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Node2D" unique_id=1709794024]
+unique_name_in_owner = true
 
-[node name="Control" parent="Node2D/CanvasLayer" unique_id=2042721612 instance=ExtResource("2_vc640")]
+[node name="Control" parent="." unique_id=2042721612 instance=ExtResource("2_vc640")]
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1904045466]
 _spawnable_scenes = PackedStringArray("uid://bbfmya0b1i86d")

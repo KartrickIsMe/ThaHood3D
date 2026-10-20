@@ -6,8 +6,6 @@
 [ext_resource type="Script" uid="uid://cm7ivhqdukomm" path="res://characters/player/equipables/rifles/ak_47/gpu_particles_3d.gd" id="4_uiv0j"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_efjg8"]
-friction = 0.0
-bounce = 1.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_efjg8"]
 radius = 0.1
@@ -44,7 +42,6 @@ radial_segments = 4
 [node name="Projectile" type="RigidBody3D" unique_id=1803157958]
 mass = 0.079
 physics_material_override = SubResource("PhysicsMaterial_efjg8")
-gravity_scale = 2.0
 continuous_cd = true
 contact_monitor = true
 max_contacts_reported = 10

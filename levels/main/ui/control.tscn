@@ -33,5 +33,10 @@ text = "Server"
 layout_mode = 2
 text = "Client"
 
+[node name="JustGiveMeALevelToPlay" type="Button" parent="VBoxContainer" unique_id=569625495]
+layout_mode = 2
+text = "JustGiveMeALevelToPlay"
+
 [connection signal="pressed" from="VBoxContainer/ServerButton" to="." method="_on_server_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ClientButton" to="." method="_on_client_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/JustGiveMeALevelToPlay" to="." method="_on_just_give_me_a_level_to_play_pressed"]
