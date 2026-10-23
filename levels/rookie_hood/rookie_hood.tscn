@@ -11,13 +11,13 @@ ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 sky_material = SubResource("ProceduralSkyMaterial_lr5jn")
 
 [sub_resource type="Environment" id="Environment_ul665"]
-background_mode = 2
+background_mode = 1
+background_energy_multiplier = 0.0
 sky = SubResource("Sky_4lg62")
 sdfgi_read_sky_light = false
-glow_enabled = true
+glow_intensity = 0.5
 glow_bloom = 1.0
 glow_hdr_scale = 3.25
-fog_enabled = true
 fog_light_color = Color(0.69803923, 1, 1, 1)
 fog_light_energy = 0.4
 
@@ -32,3 +32,4 @@ environment = SubResource("Environment_ul665")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=754453683]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 11.603657, 0)
+light_energy = 0.2

@@ -1,12 +1,12 @@
 extends Node3D
 
 @onready var muzzle_flash: GPUParticles3D = %GPUParticles3D
-@export var fire_rate: float = 9
-@export var recoil: float = 0
+@export var fire_rate: float = 10 #RPS
+@export var recoil: float = 0 #DegreePS
 @onready var shot_sound: AudioStreamPlayer3D = %AudioStreamPlayer3D
 @export var projectile_scene: PackedScene = preload("res://characters/player/equipables/rifles/ak_47/projectile.tscn")
-@export var bullet_speed: float = 720
-@export var inaccuracy: float = 5
+@export var bullet_speed: float = 300 #MS
+@export var inaccuracy: float = 5 #Degree Deviation
 var fire_rate_set: bool
 
 func attack_fire(is_firing: bool, animation_tree: AnimationTree, camera: Node3D, camera_min_angle_degrees: float, camera_max_angle_degrees: float, delta: float, player: Node3D) -> void:

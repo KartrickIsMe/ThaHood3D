@@ -99,6 +99,7 @@ albedo_texture = ExtResource("3_w3akq")
 [node name="AK47" type="Node3D" unique_id=701440955]
 transform = Transform3D(-0.25155857, 0.5417398, 0.2563906, 0.03714887, 0.29161736, -0.5797233, -0.5981957, -0.20970738, -0.14382136, 0.046904504, 0.10165882, -0.015434444)
 script = ExtResource("1_ah0g6")
+inaccuracy = 2.0
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=363164661]
 unique_name_in_owner = true
