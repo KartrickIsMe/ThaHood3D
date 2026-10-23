@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bncf3stc5htpv"
 path.s3tc="res://.godot/imported/colorAtlas.png-f0116414cbf8aaf7b13fde63bf54fe07.s3tc.ctex"
+path.etc2="res://.godot/imported/colorAtlas.png-f0116414cbf8aaf7b13fde63bf54fe07.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://models/tank/colorAtlas.png"
-dest_files=["res://.godot/imported/colorAtlas.png-f0116414cbf8aaf7b13fde63bf54fe07.s3tc.ctex"]
+dest_files=["res://.godot/imported/colorAtlas.png-f0116414cbf8aaf7b13fde63bf54fe07.s3tc.ctex", "res://.godot/imported/colorAtlas.png-f0116414cbf8aaf7b13fde63bf54fe07.etc2.ctex"]
 
 [params]
 

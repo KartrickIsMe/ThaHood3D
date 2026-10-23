@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://db6ktgxgdotft"
 path.s3tc="res://.godot/imported/Colorsheet Rock Sand.png-3ba48404e9a9b592be48e36b7d4cc10a.s3tc.ctex"
+path.etc2="res://.godot/imported/Colorsheet Rock Sand.png-3ba48404e9a9b592be48e36b7d4cc10a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://models/rocks/textures/Colorsheet Rock Sand.png"
-dest_files=["res://.godot/imported/Colorsheet Rock Sand.png-3ba48404e9a9b592be48e36b7d4cc10a.s3tc.ctex"]
+dest_files=["res://.godot/imported/Colorsheet Rock Sand.png-3ba48404e9a9b592be48e36b7d4cc10a.s3tc.ctex", "res://.godot/imported/Colorsheet Rock Sand.png-3ba48404e9a9b592be48e36b7d4cc10a.etc2.ctex"]
 
 [params]
 

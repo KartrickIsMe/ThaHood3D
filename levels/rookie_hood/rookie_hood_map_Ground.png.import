@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bimt2ah1vxxog"
 path.s3tc="res://.godot/imported/rookie_hood_map_Ground.png-a276efe62dd2f0ba5a75b2f888ac4803.s3tc.ctex"
+path.etc2="res://.godot/imported/rookie_hood_map_Ground.png-a276efe62dd2f0ba5a75b2f888ac4803.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://levels/rookie_hood/rookie_hood_map_Ground.png"
-dest_files=["res://.godot/imported/rookie_hood_map_Ground.png-a276efe62dd2f0ba5a75b2f888ac4803.s3tc.ctex"]
+dest_files=["res://.godot/imported/rookie_hood_map_Ground.png-a276efe62dd2f0ba5a75b2f888ac4803.s3tc.ctex", "res://.godot/imported/rookie_hood_map_Ground.png-a276efe62dd2f0ba5a75b2f888ac4803.etc2.ctex"]
 
 [params]
 

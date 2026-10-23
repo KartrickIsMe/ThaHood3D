@@ -1,11 +1,51 @@
 [gd_scene format=3 uid="uid://ba01ixnwmh018"]
 
-[ext_resource type="Script" uid="uid://bwebjy88hx7l5" path="res://levels/main/main.gd" id="1_f6gjy"]
+[ext_resource type="Script" uid="uid://b0jywbr17oejo" path="res://levels/main/main_network.gd" id="1_0o3xy"]
 
 [node name="Main" type="Node" unique_id=1956557121]
-script = ExtResource("1_f6gjy")
+script = ExtResource("1_0o3xy")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1055159717]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Node2D" unique_id=1709794024]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1709794024]
 unique_name_in_owner = true
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=132294874]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=1211067057]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="JoinServer" type="Button" parent="CanvasLayer/Control/VBoxContainer" unique_id=432469570]
+layout_mode = 2
+text = "Join Server"
+
+[node name="CreateServer" type="Button" parent="CanvasLayer/Control/VBoxContainer" unique_id=1650405811]
+layout_mode = 2
+text = "Create Server"
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control" unique_id=2144381446]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 97.0
+offset_right = 421.5
+offset_bottom = 138.0
+placeholder_text = "Enter Server Address"
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1728856821]
+unique_name_in_owner = true
+_spawnable_scenes = PackedStringArray("uid://w8vo2tc78kh2", "uid://bbfmya0b1i86d")
+spawn_path = NodePath("..")
+
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/JoinServer" to="." method="_on_join_server_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/CreateServer" to="." method="_on_create_server_pressed"]

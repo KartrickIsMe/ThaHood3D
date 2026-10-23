@@ -1,0 +1,2 @@
+server id = 1
+player id > 0

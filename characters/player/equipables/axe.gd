@@ -1,5 +1,4 @@
 extends Node3D
-signal hit
 
 #var swing_rate: float = 1
 

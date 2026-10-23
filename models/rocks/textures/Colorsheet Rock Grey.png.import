@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ymaqy4r1226r"
 path.s3tc="res://.godot/imported/Colorsheet Rock Grey.png-1102aa6473121f2aa9b3ff9188f5a6f9.s3tc.ctex"
+path.etc2="res://.godot/imported/Colorsheet Rock Grey.png-1102aa6473121f2aa9b3ff9188f5a6f9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://models/rocks/textures/Colorsheet Rock Grey.png"
-dest_files=["res://.godot/imported/Colorsheet Rock Grey.png-1102aa6473121f2aa9b3ff9188f5a6f9.s3tc.ctex"]
+dest_files=["res://.godot/imported/Colorsheet Rock Grey.png-1102aa6473121f2aa9b3ff9188f5a6f9.s3tc.ctex", "res://.godot/imported/Colorsheet Rock Grey.png-1102aa6473121f2aa9b3ff9188f5a6f9.etc2.ctex"]
 
 [params]
 
